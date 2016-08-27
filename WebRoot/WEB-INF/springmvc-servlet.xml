@@ -28,7 +28,7 @@
 
 	<!-- 一、 Proxy Aspect  Start-->
 	<!-- 方法1 start  -->
-	<!--<bean id="sleepHelper" class="practice.java.aop.proxyaspect.utils.SleepHelper">
+	<!--<bean id="sleepHelper" class="SleepHelper">
 	</bean>
 	<bean id="sleepPointCut" class="org.springframework.aop.support.JdkRegexpMethodPointcut">
 		<property name="pattern" value=".*sleep" />
@@ -37,11 +37,11 @@
 		<property name="advice" ref="sleepHelper"></property>
 		<property name="pointcut" ref="sleepPointCut"></property>
 	</bean>
-	<bean id="human" class="practice.java.aop.proxyaspect.impl.Human"></bean>
+	<bean id="human" class="Human"></bean>
 	<bean id="humanProxy" class="org.springframework.aop.framework.ProxyFactoryBean">
 		<property name="target" ref="human"></property>
 		<property name="interceptorNames" value="sleepHelperAdvisor"></property>
-		<property name="proxyInterfaces" value="practice.java.aop.proxyaspect.Sleepable"></property>
+		<property name="proxyInterfaces" value="Sleepable"></property>
 	</bean>
 	-->
 
@@ -49,13 +49,13 @@
 
 	<!-- 方法2 start  -->
 	<!--
-	<bean id="sleepHelper" class="practice.java.aop.proxyaspect.utils.SleepHelper">
+	<bean id="sleepHelper" class="SleepHelper">
 	</bean>
 	<bean id="sleepAdvisor" class="org.springframework.aop.support.RegexpMethodPointcutAdvisor">
 		<property name="advice" ref="sleepHelper"/>
 		<property name="pattern" value=".*sleep"/>
 	</bean>
-	<bean id="human" class="practice.java.aop.proxyaspect.impl.Human">
+	<bean id="human" class="Human">
 	</bean>
 	<bean class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator"/>
 	-->
@@ -67,15 +67,15 @@
 	<!--
 
 	<aop:aspectj-autoproxy/>
-	<bean id="sleepHelper" class="practice.java.aop.aspectj.utils.SleepHelperAJ"></bean>
-	<bean id="human" class="practice.java.aop.aspectj.impl.HumanAJ"></bean>
+	<bean id="sleepHelper" class="SleepHelperAJ"></bean>
+	<bean id="human" class="HumanAJ"></bean>
 
 	-->
 	<!-- AspectJ Annotation End-->
 
 	<!-- 三、  POJO AspectJ -->
-	<bean id="human" class="practice.java.aop.pojoaspect.impl.HumanPOJO"></bean>
-	<bean id="sleepHelper" class="practice.java.aop.pojoaspect.utils.SleepHelperPOJO"></bean>
+	<bean id="human" class="expert.java.common.aop.pojoaspect.impl.HumanPOJO"></bean>
+	<bean id="sleepHelper" class="expert.java.common.aop.pojoaspect.utils.SleepHelperPOJO"></bean>
 	<aop:config>
 		<aop:aspect ref="sleepHelper">
 			<aop:before method="beforeSleep" pointcut="execution(* *.sleep(..))"/>
