@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	   xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-2.5.xsd
+           http://www.springframework.org/schema/tx 
+     	   http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+     	   http://www.springframework.org/schema/mvc
+           http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+	   http://www.springframework.org/schema/aop
+		http://www.springframework.org/schema/aop/spring-aop-2.0.xsd">
+
+	<context:component-scan base-package="practice.java"></context:component-scan>
+	<mvc:annotation-driven />
+	<bean id="viewResolver"
+		  class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+		<property name="viewClass"
+				  value="org.springframework.web.servlet.view.JstlView"></property>
+		<property name="prefix" value="/"></property>
+		<property name="suffix" value=".jsp"></property>
+	</bean>
+
+	<!-- 一、 Proxy Aspect  Start-->
+	<!-- 方法1 start  -->
+	<!--<bean id="sleepHelper" class="practice.java.aop.proxyaspect.utils.SleepHelper">
+	</bean>
+	<bean id="sleepPointCut" class="org.springframework.aop.support.JdkRegexpMethodPointcut">
+		<property name="pattern" value=".*sleep" />
+	</bean>
+	<bean id="sleepHelperAdvisor" class="org.springframework.aop.support.DefaultPointcutAdvisor">
+		<property name="advice" ref="sleepHelper"></property>
+		<property name="pointcut" ref="sleepPointCut"></property>
+	</bean>
+	<bean id="human" class="practice.java.aop.proxyaspect.impl.Human"></bean>
+	<bean id="humanProxy" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="target" ref="human"></property>
+		<property name="interceptorNames" value="sleepHelperAdvisor"></property>
+		<property name="proxyInterfaces" value="practice.java.aop.proxyaspect.Sleepable"></property>
+	</bean>
+	-->
+
+	<!-- 方法1 end  -->
+
+	<!-- 方法2 start  -->
+	<!--
+	<bean id="sleepHelper" class="practice.java.aop.proxyaspect.utils.SleepHelper">
+	</bean>
+	<bean id="sleepAdvisor" class="org.springframework.aop.support.RegexpMethodPointcutAdvisor">
+		<property name="advice" ref="sleepHelper"/>
+		<property name="pattern" value=".*sleep"/>
+	</bean>
+	<bean id="human" class="practice.java.aop.proxyaspect.impl.Human">
+	</bean>
+	<bean class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator"/>
+	-->
+	<!-- 方法2 end  -->
+
+	<!-- Proxy Aspect End -->
+
+	<!-- 二、 AspectJ Annotation Start-->
+	<!--
+
+	<aop:aspectj-autoproxy/>
+	<bean id="sleepHelper" class="practice.java.aop.aspectj.utils.SleepHelperAJ"></bean>
+	<bean id="human" class="practice.java.aop.aspectj.impl.HumanAJ"></bean>
+
+	-->
+	<!-- AspectJ Annotation End-->
+
+	<!-- 三、  POJO AspectJ -->
+	<bean id="human" class="practice.java.aop.pojoaspect.impl.HumanPOJO"></bean>
+	<bean id="sleepHelper" class="practice.java.aop.pojoaspect.utils.SleepHelperPOJO"></bean>
+	<aop:config>
+		<aop:aspect ref="sleepHelper">
+			<aop:before method="beforeSleep" pointcut="execution(* *.sleep(..))"/>
+			<aop:after method="afterSleep" pointcut="execution(* *.sleep(..))"/>
+		</aop:aspect>
+	</aop:config>
+
+
+
+
+
+
+
+
+
+
+</beans>

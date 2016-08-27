@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: ServiceImpl Plug-in
+Bundle-SymbolicName: org.eclipse.osgi.benson.serviceImpl
+Bundle-Version: 1.0.0 
+Import-Package: com.benson.service
+Spring-Context: META-INF/spring_service.xml

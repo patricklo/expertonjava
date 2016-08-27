@@ -1,0 +1,4954 @@
+/*
+----------------------------------------------------------------------------------------------
+HSBC UK Commercial CONTROL StyleSheet
+Author:   Gordon Dougal
+Created:  23 May 2005
+Updated:  16 August 2006
+
+History:
+23 May 2005
+	Created stylesheet, will develop using multiple style-sheets, and also regularly test
+	using single style-sheet.
+
+---------------------------------------------------------------------------------------------- */
+
+
+/*
+----------------------------------------------------------------------------------------------
+HSBC HK Personal Base style sheet
+Author:   Gordon Dougal
+Created:  18 Jan 2006
+Updated:  16 August 2006
+
+History:
+
+---------------------------------------------------------------------------------------------- */
+
+/* Default
+ * Text styles
+---------------------------------------------------------------------------------------------- */
+html body,
+body
+{
+	margin: 0px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #666;
+}
+
+/* Form, Input, Select
+ * Layout styles
+---------------------------------------------------------------------------------------------- */
+form
+{
+	display:inline;
+}
+input,
+select,
+label
+{
+	vertical-align:middle !important;
+}
+
+/* A, A Img
+ * Text stlyes
+---------------------------------------------------------------------------------------------- */
+a img
+{
+	border:0px;
+}
+a
+{
+	color:#f00;
+	text-decoration:underline;
+}
+
+
+
+/* Table Style Base - used for all tables, gives a set of specific styles that can be used for
+	table text
+---------------------------------------------------------------------------------------------- */
+table
+{
+	border-collapse: collapse;
+	margin: 0px;
+}
+
+table td ul,
+table td ol
+{
+	font-size: 100% !important;
+	margin-top: 0px !important;
+}
+table td ol
+{
+	padding-left: 8px !important;
+}
+table td ul li,
+table td ol li
+{
+	line-height: 1.6em;
+}
+
+table .hsbcSizeText01
+{
+	font-size: 80%;
+	/* \*/
+	font-size: 75%;
+	/* */
+}
+
+/* Content Style Base - includes base html text elements (p,h1,h2,h3 etc).
+---------------------------------------------------------------------------------------------- */
+div.hsbcStyleContentBase .hsbcContent
+{
+
+}
+
+h1, h2, h3, h4, h5, h6
+{
+	margin: 5px 0px !important;
+}
+h1,
+div.hsbcStyleContentBase h1
+{
+	margin: 0px !important;
+	color: #f00;
+	font-weight: bold;
+	font-size: 156%;
+	/* \*/
+	font-size: 149%;
+	/* */
+}
+h2,
+div.hsbcStyleContentBase h2
+{
+	color: #333;
+	margin-top: 14px !important;
+	margin-bottom:8px;
+	padding-top: 0px;
+	font-weight: normal;
+	font-size: 124% !important;
+	/* \*/
+	font-size: 119% !important;
+	/* */
+}
+h3,
+div.hsbcStyleContentBase h3
+{
+	margin-top: 10px !important;
+	margin-bottom:8px;
+	font-weight: bold;
+	font-size: 93% !important;
+	/* \*/
+	font-size: 87% !important;
+	/* */
+}
+div.hsbcStyleContentBase p
+{
+
+	margin-top: 7px;
+	margin-bottom: 8px !important;
+/*
+	/-* mac-ie *-/
+	font-size:80%;
+	/-*non-mac-ie \*-/
+	font-size:76%;
+	/-* *-/
+*/
+}
+div.hsbcStyleContentBase ol
+{
+	margin-left: 12px;
+	padding-left: 10px;
+	/* mac-ie */
+	font-size:80%;
+	/*non-mac-ie \*/
+	font-size:76%;
+	/* */
+}
+div.hsbcStyleContentBase ul
+{
+	margin: 6px 0px 12px;
+	padding: 0;
+	list-style: none;
+	line-height: 1.5em;
+}
+div.hsbcStyleContentBase ul li
+{
+	background: url("../../images/common/arrow_black_circle.gif") no-repeat top left;
+	padding-left: 12px;
+}
+
+.hsbcBackgroundStyle03
+{
+	background: url("../../images/common/page_back_grey.gif") repeat-y bottom left;
+}
+
+
+
+/* Custom homepage styles
+---------------------------------------------------------------------------------------------- */
+div.containerControlHomeFull img
+{
+	margin-right: 2px;
+}
+
+
+
+/* Horizontal Line
+---------------------------------------------------------------------------------------------- */
+p.extHrType01
+{
+	background: #ccc;
+	height: 1px;		/* This could be causing extra padding */
+	line-height:1px;
+	display:block;
+	font-size:1%;
+}
+div.extHrType01
+{
+	border-bottom: 1px solid #ccc;
+	line-height:1px;
+	display:inherit;
+	font-size:1%;
+	height: 1px;
+}
+div.extHrType02
+{
+	border-top: 1px solid #ccc;
+	line-height:1px;
+	display:inherit;
+	font-size:1%;
+	height: 1px;
+}
+div.extHrType03
+{
+	border-bottom: 1px solid #ccc;
+	line-height:1px;
+	display:inherit;
+	font-size:1%;
+	height: 1px;
+	padding-top: 12px;
+}
+div.extHrType04
+{
+	margin-top: 1px;
+	border-top: 1px solid #ccc;
+	height:1px;
+	font-size:0px;
+	line-height:1px;
+}
+
+.pageBorderTop {
+	border-top:1px solid #ccc;
+}
+
+
+
+.hsbcEndFloat
+{
+	clear:both;
+	width:auto;
+	height:auto;
+	display:inherit;
+	visibility:none;
+}
+
+.hsbcEndFloat02
+{
+	/* \*/
+	clear: none;
+	width: 200px;
+	display: block;
+	height: 1px;
+	/* */
+
+	c\lear:both;
+	wid\th:auto;
+	heigh\t:auto;
+	di\splay:inherit;
+	\visibility:none;
+}
+
+
+
+
+.hsbcBackground01
+{
+	background: url("../../images/common/divlets/NOTE.gif") no-repeat bottom right !important;
+}
+.hsbcBackground04
+{
+	border: 1px solid #ccc;
+	background-color: #fff;
+}
+.hsbcBackground05
+{
+	background-color: #ffeaea;
+}
+.hsbcBackground06
+{
+	background-color: #eee;
+}
+
+.ie6Fix
+{
+	height:1px;
+	font-size:1px;
+	position:absolute;
+	top:-2000px;
+	left:-2000px;
+}
+
+a.hsbcSkiplink
+{
+	color: #fff;
+	font-size: 74%;
+	/* \*/
+	font-size: 69%;
+	/* */
+}
+
+.hsbcFixHieght
+{
+	height: 23px;
+}
+
+
+/* ***************  FLOATING CONTAINER STYLES ************************ */
+
+.hsbcColumn .hsbcColumn
+{
+	width: 294px !important;
+	/* \*/
+	width: 296px !important;
+	/* */
+	float: right;
+	margin-top: 16px;
+	margin-right: 0px !important;
+}
+.hsbcColumn .hsbcColumn .hsbcContent
+{
+	padding-right: 0px;
+	margin-right: 0px;
+}
+.hsbcColumn .hsbcColumn .hsbcStyleContent08 h2
+{
+	width: 220px;
+}
+
+.hsbcColumn .hsbcSecondaryContent01
+{
+	width: 294px !important;
+	/* \*/
+	width: 296px !important;
+	/* */
+	float: left;
+}
+.hsbcColumn .hsbcSecondaryContent01 .hsbcContent
+{
+	margin-left: 0px !important;
+	margin-right: 16px !important;
+}
+
+.hsbcColumn .hsbcColumn .hsbcContent
+{
+	margin-right: 0px !important;
+}
+
+.hsbcColumn .hsbcSecondaryContent01 .hsbcStyleContent04,
+.hsbcColumn .hsbcSecondaryContent01 .hsbcStyleContent05
+{
+	border-right: 32px solid #fff;
+	width: 236px;
+}
+
+.hsbcColumn .hsbcColumn .hsbcStyleContent02
+{
+	padding-right: 16px !important;
+	margin-right: -16px !important;
+	margin-left: 16px !important;
+	padding-left: 16px;
+}
+
+.hsbcColumn .hsbcSecondaryContent01 .hsbcStyleContent02
+{
+	padding-left: 0px !important;
+	margin-left: 0px !important;
+	margin-right: 16px !important;
+	padding-right: 16px !important;
+}
+
+.hsbcColumn .hsbcColumn div.hsbcStyleContent08 .hsbcRightContent
+{
+	width: 96% !important;
+}
+.hsbcColumn .hsbcSecondaryContent01 div.hsbcStyleContent08 .hsbcRightContent
+{
+	width: 85% !important;
+}
+
+.hsbcColumn .hsbcSecondaryContent01 .hsbcStyleContent06
+{
+	padding-left: 16px !important;
+	margin-left: 0px !important;
+	margin-right: 32px !important;
+	padding-right: 16px !important;
+}
+
+.hsbcColumn .hsbcSecondaryContent01 .hsbcFlexStyle01
+{
+	padding-left: 14px;
+	margin-right: 32px !important;
+}
+
+/*
+----------------------------------------------------------------------------------------------
+HSBC HK PWS BASE StyleSheet
+Author:   Rew Islam
+Created:  25 January 2006
+Updated:  16 August 2006
+
+History:
+
+---------------------------------------------------------------------------------------------- */
+
+/* StyleContent classes
+ *
+---------------------------------------------------------------------------------------------- */
+
+h1 span
+{
+	text-transform:uppercase;
+	font-size:80%;
+}
+
+h1 span.hsbcSizeText03
+{
+	color:#000099!important;
+	text-transform:none;
+	font-weight:normal;
+}
+
+.hsbcContent ul
+{
+	font-size: 74%;
+	/* \*/
+	font-size: 69%;
+	/* */
+}
+
+
+
+div.hsbcStyleContent80
+{
+	margin: 16px 0px 0px 16px !important;
+	padding: 16px 16px 0px 16px !important;
+}
+
+div.hsbcStyleContent81
+{
+	margin: 16px 0px 0px 16px !important;
+	padding: 0px 16px 0px 16px !important;
+}
+
+div.hsbcStyleContent82
+{
+	margin: 8px 0px 0px 16px !important;
+	padding: 9px 16px 0px 16px !important;
+}
+
+div.hsbcStyleContent83
+{
+	margin: 0px 0px 0px 16px !important;
+	padding: 0px 16px 0px 16px !important;
+}
+
+div.hsbcStyleContent84
+{
+	margin: 26px 0px 0px 16px !important;
+	padding: 0px 16px 0px 16px !important;
+}
+
+div.hsbcStyleContent80 h2,
+div.hsbcStyleContent81 h2,
+div.hsbcStyleContent82 h2,
+div.hsbcStyleContent83 h2,
+div.hsbcStyleContent84 h2
+{
+	padding-top: 0px;
+	margin-top: 0px;
+}
+
+/* ********************* DecStyle01 - Header Image w/ Text ************************ */
+/* ********************* DecStyle02 - Text w/ Promo ******************************* */
+
+div.hsbcDecStyle01 p,
+div.hsbcDecStyle02 p
+{
+	padding-bottom:16px !important;
+}
+
+div.hsbcDecStyle01
+{
+	background: url("../../images/common/banking_bg.jpg") no-repeat bottom right;
+	padding-right: 390px !important;
+	padding-bottom: 18px !important;
+
+}
+div.hsbcDecStyle02 h2,
+div.hsbcDecStyle02 p,
+div.hsbcDecStyle01 h2,
+div.hsbcDecStyle01 p
+{
+	color: #973131;
+	margin: 0px; padding: 0px;
+}
+div.hsbcDecStyle02 p,
+div.hsbcDecStyle01 p
+{
+	font-size: 80%;
+	/* \*/
+	font-size: 75%;
+	/* */
+}
+div.hsbcDecStyle02 h2,
+div.hsbcDecStyle01 h2
+{
+	text-transform:uppercase;
+	font-weight: bold;
+	font-size: 155%;
+	/* \*/
+	font-size: 150%;
+	/* */
+}
+div.hsbcDecStyle02 h2 span,
+div.hsbcDecStyle01 h2 span
+{
+	color: #f00;
+}
+
+/* ********************* DecStyle03 - Header Image, text and tabs **************** */
+
+div.hsbcDecStyle03
+{
+	background: url("../../images/common/cards_bg.jpg") no-repeat bottom left;
+}
+div.hsbcDecStyle03 h1
+{
+	padding-top: 10px;
+	position: absolute;
+	color: #fff;
+	font-size: 143%;
+	/* \*/
+	font-size: 137%;
+	/* */
+}
+#ipo h1
+{
+	padding-top: 0px;
+	color: #f00;
+}
+#ipo h1 span
+{
+	color: #9a9a9a;
+}
+div.hsbcDecStyle03 h1 span
+{
+	color: #d2d3bf;
+}
+#ipo div.hsbcDecStyle03 { background: url("../../images/common/backgrounds/ipo_header_bg.jpg") no-repeat bottom left; }
+#cod div.hsbcDecStyle03 { background: url("../../images/common/backgrounds/cod_header_bg.jpg") no-repeat bottom left; }
+div.hsbcDecStyle03 ul
+{
+	margin-top: 0px;
+	padding-top: 91px;
+	margin-bottom: 0px;
+	margin-left:16px;
+}
+#ipo div.hsbcDecStyle03 ul
+{
+	padding-top: 61px !important;
+}
+div.hsbcDecStyle03 ul li
+{
+	background: url("../../images/common/cards_tab_left.gif") no-repeat bottom left;
+	padding-left: 3px;
+	float: left;
+	margin-top:-6px;
+	margin-right: 2px;
+	margin-left:0px;
+}
+#ipo div.hsbcDecStyle03 ul li { background: url("../../images/common/tabclear_left.gif") no-repeat bottom left; }
+#cod div.hsbcDecStyle03 ul li { background: url("../../images/common/ipo_tab_left.gif") no-repeat bottom left;}
+div.hsbcDecStyle03 ul li span
+{
+	background: url("../../images/common/cards_tab_right.gif") no-repeat bottom right;
+	padding: 4px 16px;
+	float: left;
+}
+#ipo div.hsbcDecStyle03 ul li span { background: url("../../images/common/tabclear_right.gif") no-repeat bottom right;}
+#cod div.hsbcDecStyle03 ul li span { background: url("../../images/common/ipo_tab_right.gif") no-repeat bottom right;}
+div.hsbcDecStyle03 ul li.selected
+{
+	background: url("../../images/common/cards_tab_left_sel.gif") no-repeat bottom left;
+}
+#ipo div.hsbcDecStyle03 ul li.selected { background: url("../../images/common/tabclear_left_sel.gif") no-repeat bottom left;}
+#cod div.hsbcDecStyle03 ul li.selected { background: url("../../images/common/ipo_tab_left_selected.gif") no-repeat bottom left;}
+div.hsbcDecStyle03 ul li.selected span
+{
+	background: url("../../images/common/cards_tab_right_sel.gif") no-repeat bottom right;
+}
+#ipo div.hsbcDecStyle03 ul li.selected span { background: url("../../images/common/tabclear_right_sel.gif") no-repeat bottom right;}
+#cod div.hsbcDecStyle03 ul li.selected span { background: url("../../images/common/ipo_tab_right_selected.gif") no-repeat bottom right;}
+div.hsbcDecStyle03 ul li a
+{
+	color: #b96a72;
+	font-weight: bold;
+	text-decoration: none;
+	text-transform:uppercase;
+}
+#ipo div.hsbcDecStyle03 ul li a, #ipo div.hsbcDecStyle03 ul li.selected a { color: #666 !important; }
+#cod div.hsbcDecStyle03 ul li a { color: #a1a27f; }
+div.hsbcDecStyle03 ul li.selected a
+{
+	color: #a32f3a !important;
+}
+#cod div.hsbcDecStyle03 ul li.selected a { color: #716d46 !important; }
+
+div.hsbcDecStyle03 ul li.selected a:hover
+{
+	color: #a32f3a !important;
+	text-decoration:none;
+	cursor:default;
+}
+/* ********************* DecStyle05 - Std label+input styles ****************** */
+
+div.hsbcDecStyle05 label
+{
+	font-weight: bold;
+	margin-right: 4px;
+	font-size: 80%;
+	/* \*/
+	font-size: 75%;
+	/* */
+}
+div.hsbcDecStyle05 select
+{
+	width: 300px;
+	margin-right: 4px;
+	font-size: 80%;
+	/* \*/
+	font-size: 75%;
+	/* */
+}
+
+/* ********************* DecStyle06 - show/hide section ****************** */
+
+div.hsbcDecStyle06 .hsbcToggle
+{
+	width: 25px;
+	float: left;
+	padding-top: 11px;
+}
+
+div.hsbcDecStyle06 .hsbcQSection
+{
+	float: left;
+	width: 717px;
+}
+
+/* ********************* DecStyle07 - generic tool sction **************** */
+
+div.hsbcDecStyle08,
+div.hsbcDecStyle07
+{
+	border: 1px solid #ccc;
+	padding: 0px 16px 16px 16px !important;
+	background-color: #fff;
+}
+
+div.hsbcBoxStyle01 div.hsbcDecStyle08,
+div.hsbcBoxStyle01 div.hsbcDecStyle07
+{
+	margin-left:0px !important;
+	margin-right:0px !important;
+}
+
+div.hsbcDecStyle08
+{
+	border-top: 0px;
+	padding: 16px !important;
+}
+div.hsbcDecStyle08 h2,
+div.hsbcDecStyle07 h2
+{
+	margin-bottom: 0px !important;
+	padding-bottom: 0px !important;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 155% !important;
+	/* \*/
+	font-size: 150% !important;
+	/* */
+}
+div.hsbcDecStyle08 div.hsbcInputSection
+{
+	padding-bottom: 10px;
+}
+div.hsbcDecStyle07 div.hsbcInputSection
+{
+	padding-top: 10px;
+}
+div.hsbcDecStyle08 div.hsbcInputSection input
+{
+	margin-bottom: -16px;
+	/* \*/
+	margin-bottom: 0px;
+	/**/
+}
+div.hsbcDecStyle07 div.hsbcInputSection h3,
+div.hsbcDecStyle08 div.hsbcInputSection h3
+{
+	font-size:100%;
+}
+div.hsbcDecStyle07 div.hsbcInputSection input
+{
+	width: 110px;
+}
+div.containerControlTwo div.hsbcDecStyle07
+{
+	padding-bottom: 46px !important;
+}
+div.containerControlTwo div.hsbcSpacing03
+{
+	padding-bottom: 0px !important;
+}
+
+div.hsbcDecStyle08 a,
+div.hsbcDecStyle07 a
+{
+	color: #666;
+}
+div.hsbcDecStyle08 label,
+div.hsbcDecStyle07 label
+{
+	font-weight: bold;
+	font-size: 74% !important;
+	/* \*/
+	font-size: 69% !important;
+	/* */
+}
+div.hsbcDecStyle07 label.hsbcResultText,
+div.hsbcDecStyle08 label.hsbcResultText
+{	font-size: 100% !important;
+	/* \*/
+	font-size: 100% !important;
+	/* */
+}
+div.hsbcDecStyle07 label.hsbcResultText span.hsbcMainText,
+div.hsbcDecStyle08 label.hsbcResultText span.hsbcMainText
+{
+	font-weight: bold;
+	font-size: 111% !important;
+	/* \*/
+	font-size: 106% !important;
+	/* */
+}
+div.hsbcDecStyle07 label.hsbcResultText span.hsbcSubText,
+div.hsbcDecStyle08 label.hsbcResultText span.hsbcSubText
+{
+	padding-left: 25px;
+	font-size: 74% !important;
+	/* \*/
+	font-size: 69% !important;
+	/* */
+}
+div.hsbcDecStyle07 label
+{
+	width: 200px;
+}
+div.hsbcDecStyle08 label span,
+div.hsbcDecStyle07 label span
+{
+	font-weight: normal;
+}
+
+div.hsbcDecStyle08 p,
+div.hsbcDecStyle07 p
+{
+	margin-top: 0px;
+	font-size: 74% !important;
+	/* \*/
+	font-size: 69% !important;
+	/* */
+}
+
+div.hsbcDecStyle07 p
+{
+	width: 200px;
+}
+
+div.hsbcDecStyle09
+{
+	padding: 0px !important;
+	background: none;
+}
+
+div.hsbcDecStyle09 h1
+{
+	margin: 0px; padding: 0px;
+}
+
+div.hsbcDecStyle10
+{
+	padding:0px;
+	margin:0px;
+}
+
+div.hsbcDecStyle10 a
+{
+	display:block !important;
+	min-height:66px;
+	padding:18px 290px 18px 18px !important;
+	text-decoration:none;
+	color: #666;
+}
+
+div.hsbcDecStyle10 a:hover
+{
+	text-decoration:none !important;
+}
+
+
+div.hsbcDecStyle10 a span.title
+{
+	font-size: 124% !important;
+	/* \*/
+	font-size: 119% !important;
+	/* */
+	color: #666;
+}
+
+div.hsbcDecStyle10 a span.intro
+{
+	font-size: 80% !important;
+	/* \*/
+	font-size: 75% !important;
+	/* */
+	color: #666;
+	display:block;
+	padding-top:10px;
+	padding-bottom:5px;
+}
+
+/* DecStyle11 used for Banking FAQ section */
+div.hsbcDecStyle11 {
+
+}
+
+div.hsbcDecStyle11 h2 {
+	padding-top:20px;
+	color:#666;
+	font-size:125%;
+}
+
+div.hsbcDecStyle11 h2 span {
+	color:#999;
+}
+
+div.hsbcDecStyle11 h3 {
+	font-size: 100%;
+	padding:10px 0px 0px 0px!important;
+	margin:0px!important;
+}
+
+div.hsbcDecStyle11 h3 span {
+	color: #f00;
+}
+
+div.hsbcDecStyle11 ul.questions {
+	margin:10px 0px 0px 0px ;
+	padding:0px;
+	font-size:75%;
+	float:left;
+}
+
+div.hsbcDecStyle11 ul.questions li {
+	margin:0px 0px 10px 0px ;
+	padding:0px 0px 0px 10px;
+	background:url("../../images/common/decStyle11_arrow.gif") no-repeat top left;
+	list-style:none;
+	float:left;
+	clear:left;
+	width:730px!important;
+}
+
+div.hsbcDecStyle11 ul.questions li span {
+	float:left;
+	padding-right:5px;
+}
+
+div.hsbcDecStyle11 hr {
+	height:1px;
+	width:100%;
+	border-collapse:collapse;
+	border:none;
+	border-top:1px solid #d4d4d4;
+	margin-top:30px;
+}
+
+div.hsbcDecStyle11 p {
+	font-size:75%;
+	padding:3px 0px 0px 0px!important;
+	margin:0px!important;
+}
+
+div.hsbcDecStyle11 .answer {
+	clear:both;
+	padding-bottom:40px;
+}
+/* custom colors */
+
+#banking .hsbcCustomText/*, #banking .hsbcCustomText a*/ { color: #333333; }
+#banking .hsbcCustomBg { background-color: #f9eeee; }
+#investments .hsbcCustomText/*, #investments .hsbcCustomText a*/ { color: #333333; }
+#investments .hsbcCustomBg { background-color: #eff1e0; }
+#cards .hsbcCustomText/*, #cards .hsbcCustomText a*/ { color: #333333; }
+#cards .hsbcCustomBg { background-color: #faf0e4; }
+#mortgages .hsbcCustomText/*, #mortgages .hsbcCustomText a*/ { color: #333333; }
+#mortgages .hsbcCustomBg { background-color: #f6f3e8; }
+#loans .hsbcCustomText/*, #loans .hsbcCustomText a*/ { color: #333333; }
+#loans .hsbcCustomBg { background-color: #efeef0; }
+#insurance .hsbcCustomText/*, #insurance .hsbcCustomText a*/ { color: #333333; }
+#insurance .hsbcCustomBg { background-color: #eef3f1; }
+#international .hsbcCustomText/*, #international .hsbcCustomText a*/ { color: #333333; }
+#international .hsbcCustomBg { background-color: #f0f5f8; }
+#financialPlanning .hsbcCustomText/*, #financialPlanning .hsbcCustomText a*/ { color: #333333; }
+#financialPlanning .hsbcCustomBg { background-color: #ebebf9; }
+#premier .hsbcCustomText/*, #premier .hsbcCustomText a*/ { color: #333333; }
+#premier .hsbcCustomBg { background-color: #eaeef2; }
+#pvant .hsbcCustomText/*, #pvant .hsbcCustomText a*/ { color: #333333 !important; }
+#pvant .hsbcCustomBg { background-color: #fff5ea; }
+
+/*
+#banking ul.hsbcListStyle02 li { background-color: #973131 !important; }
+#investments ul.hsbcListStyle02 li { background-color: #716d46 !important; }
+#cards ul.hsbcListStyle02 li { background-color: #bc7507 !important; }
+#mortgages ul.hsbcListStyle02 li { background-color: #7c5f3d !important; }
+#loans ul.hsbcListStyle02 li { background-color: #676767 !important; }
+#insurance ul.hsbcListStyle02 li { background-color: #4e7878 !important; }
+#financialPlanning ul.hsbcListStyle02 li { background-color: #545776 !important; }
+#international ul.hsbcListStyle02 li { background-color: #436983 !important; }
+#pvant ul.hsbcListStyle02 li  { background-color: #e97806 !important; }
+*/
+
+
+
+
+
+.hsbcFullBackground01
+{
+	background: url("../../images/common/backgrounds/bg_banking_pink.gif") no-repeat top left;
+}
+.hsbcFullBackground02
+{
+	background: url("../../images/common/backgrounds/bg_cards_orange.gif") no-repeat top left;
+}
+.hsbcFullBackground03
+{
+	background: url("../../images/common/backgrounds/bg_finplan_violet.gif") no-repeat top left;
+}
+.hsbcFullBackground04
+{
+	background: url("../../images/common/backgrounds/bg_ins_green.gif") no-repeat top left;
+}
+.hsbcFullBackground05
+{
+	background: url("../../images/common/backgrounds/bg_int_lblue.gif") no-repeat top left;
+}
+.hsbcFullBackground06
+{
+	background: url("../../images/common/backgrounds/bg_invest_green.gif") no-repeat top left;
+}
+.hsbcFullBackground07
+{
+	background: url("../../images/common/backgrounds/bg_loans_grey.gif") no-repeat top left;
+}
+.hsbcFullBackground08
+{
+	background: url("../../images/common/backgrounds/bg_mtgs_cream.gif") no-repeat top left;
+}
+.hsbcFullBackground09
+{
+	background: url("../../images/common/backgrounds/bg_premier_snow.jpg") no-repeat top left;
+}
+.hsbcFullBackground10
+{
+	background: url("../../images/common/premier_bg.gif") no-repeat bottom left;
+}
+.hsbcFullBackground11
+{
+	background: url("../../images/common/backgrounds/bg_generic_grey.gif") no-repeat top left;
+}
+.hsbcFullBackground12
+{
+	background: url("../../images/common/backgrounds/bg_generic_pink_grey.gif") no-repeat top left;
+}
+.hsbcFullBackground13
+{
+	background: url("../../images/common/backgrounds/bg_generic_pink_full.gif") no-repeat top left;
+}
+.hsbcFullBackground14
+{
+	background: url("../../images/common/backgrounds/bg_ipo_full.jpg") no-repeat top left;
+}
+.hsbcFullBackground15
+{
+	background: url("../../images/common/backgrounds/bg_cod_full.jpg") no-repeat top left;
+}
+.hsbcFullBackground16
+{
+	background: url("../../images/common/backgrounds/bg_pv_full.gif") repeat-y top left;
+}
+
+
+
+
+
+
+
+
+
+
+
+div.hsbcStyleContent15
+{
+	margin: 0px 16px 0px 16px !important;
+}
+
+div.hsbcStyleContent28
+{
+	margin : 0px 0px 0px 17px !important;
+	padding: 16px !important;
+	background-color: #F6F3E8;
+}
+div.hsbcStyleContent32
+{
+	margin : 0px 0px 0px 17px !important;
+	padding: 16px !important;
+	background-color: #EEF3F1;
+}
+div.hsbcStyleContent28 h2
+{
+	color: #7C5F3D;
+	padding-bottom: 12px;
+	font-size: 130%;
+	/* \ */
+	font-size: 125%;
+	/* */
+}
+div.hsbcStyleContent32 h2
+{
+	color: #4E7878;
+	padding-bottom: 12px;
+	font-size: 130%;
+	/* \ */
+	font-size: 125%;
+	/* */
+}
+div.hsbcStyleContent33
+{
+	background: url("../../images/common/cards_bg.jpg") no-repeat bottom left;
+	margin-left: 16px !important;
+}
+div.hsbcStyleContent33 ul
+{
+	margin-top: 0px;
+	padding-top: 107px;
+	margin-bottom: 0px;
+}
+
+div.hsbcStyleContent40 {
+	padding:0px!important;
+	margin:0px!important;
+}
+
+div.hsbcStyleContent40 ul
+{
+	border-bottom: 1px solid #d4d4d4;
+	margin-top: 32px;
+	padding-bottom: 16px;
+	padding-left: 16px;
+	margin-bottom:0px;
+}
+div.hsbcStyleContent40 ul li,
+div.hsbcStyleContent33 ul li
+{
+	background: url("../../images/common/cards_tab_left.gif") no-repeat bottom left;
+	padding-left: 3px;
+	float: left;
+	margin-top:-7px;
+	margin-right: 2px;
+}
+div.hsbcStyleContent40 ul li
+{
+	background: url("../../images/common/tabclear_left.gif") no-repeat bottom left;
+}
+div.hsbcStyleContent40 ul li.selected
+{
+	background: url("../../images/common/tabclear_left_sel.gif") no-repeat bottom left;
+}
+div.hsbcStyleContent33 ul li.selected
+{
+	background: url("../../images/common/cards_tab_left_sel.gif") no-repeat bottom left;
+}
+div.hsbcStyleContent40 ul li span
+{
+	background: url("../../images/common/tabclear_right.gif") no-repeat bottom left;
+}
+div.hsbcStyleContent40 ul li span,
+div.hsbcStyleContent33 ul li span
+{
+	background: url("../../images/common/cards_tab_right.gif") no-repeat bottom right;
+	padding: 3px 16px;
+	float: left;
+}
+div.hsbcStyleContent40 ul li span
+{
+	background: url("../../images/common/tabclear_right.gif") no-repeat bottom right;
+}
+div.hsbcStyleContent40 ul li.selected span
+{
+	background: url("../../images/common/tabclear_right_sel.gif") no-repeat bottom right;
+}
+div.hsbcStyleContent33 ul li.selected span
+{
+	background: url("../../images/common/cards_tab_right_sel.gif") no-repeat bottom right;
+}
+div.hsbcStyleContent40 ul li a,
+div.hsbcStyleContent33 ul li a
+{
+	color: #b96a72;
+	font-weight: bold;
+	text-decoration: none;
+	text-transform:uppercase;
+	vertical-align:middle;
+}
+div.hsbcStyleContent40 ul li a
+{
+	color: #666;
+}
+div.hsbcStyleContent40 ul li.selected a
+{
+	color: #f00;
+}
+div.hsbcStyleContent40 ul li.selected a:hover
+{
+	color: #f00;
+	text-decoration:none;
+	cursor:default;
+}
+div.hsbcStyleContent33 ul li.selected a
+{
+	color: #a32f3a !important;
+}
+div.hsbcStyleContent34
+{
+	margin-left: 16px !important;
+	padding-right: 16px !important;
+	background-color: #faebec;
+}
+div.hsbcStyleContent34 h2
+{
+	padding: 30px 0px 5px;
+}
+div.hsbcStyleContent34 p
+{
+	padding-bottom: 6px;
+	color: #666;
+	font-weight: bold;
+	font-size: 80%;
+	/* \*/
+	font-size: 75%;
+	/* */
+}
+div.hsbcStyleContent34 p select
+{
+	width: 300px;
+	margin: 0px 5px;
+}
+div.hsbcStyleContent34 p a
+{
+	color: #666;
+}
+
+div.hsbcStyleContent35
+{
+	background: url("../../images/common/banking_bg.jpg") no-repeat bottom right;
+	padding: 0px 384px 0px 32px !important;
+	height: 84px;
+}
+div.hsbcStyleContent35 h2,
+div.hsbcStyleContent35 p
+{
+	color: #973131;
+	margin: 0px; padding: 0px;
+}
+div.hsbcStyleContent35 p
+{
+	font-size: 80%;
+	/* \*/
+	font-size: 75%;
+	/* */
+}
+div.hsbcStyleContent35 h2
+{
+	padding-top: 15px;
+	text-transform:uppercase;
+	font-weight: bold;
+	font-size: 155%;
+	/* \*/
+	font-size: 150%;
+	/* */
+}
+div.hsbcStyleContent35 h2 span
+{
+	color: #f00;
+}
+div.hsbcBackground08
+{
+	background: url("../../images/common/investments_bg.jpg") no-repeat bottom right;
+}
+div.hsbcBackground08 h2,
+div.hsbcBackground08 p
+{
+	color: #716d46;
+}
+div.hsbcStyleContent36
+{
+	margin: 16px 0px 0px 16px !important;
+	padding-top: 5px !important;
+	padding-right: 17px !important
+}
+div.hsbcStyleContent37
+{
+	width: 100%;
+	background: url("../../images/common/grey_gradient_down.jpg") repeat-x bottom left;
+	margin-left: 16px !important;
+	margin-top: 5px !important;
+	padding-bottom: 10px !important;
+}
+div.hsbcStyleContent38
+{
+	width: 100%;
+	margin-left: 16px !important;
+	margin-top: 5px !important;
+	padding-bottom: 0px !important;
+}
+div.hsbcStyleContent39
+{
+	margin-bottom: -16px !important;
+}
+div.hsbcStyleContent39 h2
+{
+	padding: 0px 16px !important;
+	color: #973131;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 155%;
+	/* \*/
+	font-size: 150%;
+	/* */
+}
+div.hsbcStyleContent39 h2 span
+{
+	color: #f00;
+}
+
+/* StyleContent - Table tabs
+---------------------------------------------------------------------------------------------- */
+div.hsbcStyleContent16
+{
+	height:25px;
+	width:100%;
+	clear:left;
+}
+div.hsbcStyleContent16 ul
+{
+	margin:0px;
+	padding:0px;
+	text-transform:uppercase;
+}
+div.hsbcStyleContent16 ul li
+{
+	margin:0px 4px 0px 0px;
+	padding:0px 0px 0px 3px;
+	list-style:none;
+	float:left;
+	height:25px;
+	background:url("../../images/common/table_tab_off_left.gif") no-repeat top left;
+	text-align:center;
+}
+div.hsbcStyleContent16 ul li a
+{
+	padding:0px 17px 0px 17px;
+	margin:0px;
+	height:25px;
+	line-height:25px;
+	float:left;
+	display:block;
+	background:url("../../images/common/table_tab_off_right.gif") no-repeat top right;
+	text-decoration:none;
+	color:#A7AB90;
+	font-weight:bold;
+	vertical-align:50%;
+}
+div > .hsbcStyleContent16 ul li a
+{
+	line-height:28px;
+}
+div.hsbcStyleContent16 ul li h1
+{
+	font-size:100%;
+	color:#6F7454;
+}
+div.hsbcStyleContent16 ul li.extSelected
+{
+	background-image:url("../../images/common/table_tab_on_left.gif");
+}
+div.hsbcStyleContent16 ul li.extSelected a
+{
+	color:#6F7454;
+	background-image:url("../../images/common/table_tab_on_right.gif");
+}
+div.hsbcStyleContent16 span.hsbcAlign03
+{
+	text-transform:uppercase;
+	font-size: 68%;
+	/* \*/
+	font-size: 61%;
+	/* */
+	padding-top:5px;
+}
+div.hsbcStyleContent16 span.hsbcAlign03 a
+{
+	color:#666;
+}
+
+/* StyleContent - Table links
+---------------------------------------------------------------------------------------------- */
+div.hsbcStyleContent17
+{
+	text-transform:uppercase;
+	font-size: 68%;
+	/* \*/
+	font-size: 61%;
+	/* */
+	font-weight:bold;
+	border-left:1px solid #ccc;
+	border-right:1px solid #ccc;
+	border-top:1px solid #ccc;
+	background-color:#DFE4C1;
+	padding:7px 0px 5px 10px;
+}
+div.hsbcStyleContent17 a
+{
+	color:#6F7454;
+}
+div.hsbcStyleContent17 a.extSelected
+{
+	color:#f00;
+}
+
+div.hsbcStyleContent43
+{
+	background-color: #dfe4c1;
+	border-left:1px solid #ccc;
+	border-right:1px solid #ccc;
+	border-top:1px solid #ccc;
+	padding:16px 10px 16px 10px;
+	font-weight: bold;
+	color: #6f7454;
+	font-size: 93% !important;
+	/* \*/
+	font-size: 87% !important;
+	/* */
+}
+div.hsbcStyleContent43 a
+{
+	margin-left: 10px;
+}
+
+div.hsbcStyleContent18
+{
+	border-left:1px solid #ccc;
+	border-right:1px solid #ccc;
+	border-bottom:1px solid #ccc;
+}
+div.hsbcStyleContent18 td,
+div.hsbcStyleContent18 th
+{
+	border-right: 0 !important;
+}
+div.hsbcStyleContent18 td.extLastItem,
+div.hsbcStyleContent18 th.extLastItem
+{
+	border-bottom: 0 !important;
+}
+
+div.containerControlOne div.hsbcStyleContent19
+{
+	background: url("../../images/common/city_bg.jpg") no-repeat bottom left;
+}
+div.containerControlTwo div.hsbcStyleContent19
+{
+	background: url("../../images/common/city_small_bg.jpg") no-repeat top left;
+}
+div.hsbcStyleContent29
+{
+	background: url("../../images/common/planner_tool1_bg.jpg") no-repeat bottom left;
+	background-color:#fff;
+}
+div.hsbcStyleContent30
+{
+	background: url("../../images/common/planner_tool2_bg.jpg") no-repeat bottom right;
+	background-color:#fff;
+}
+div.containerControlTwo div.hsbcStyleContent19 h2,
+div.containerControlTwo div.hsbcStyleContent29 h2,
+div.containerControlTwo div.hsbcStyleContent30 h2
+{
+	color: #7C5F3D;
+	padding-bottom: 5px;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 155%;
+	/* \*/
+	font-size: 150%;
+	/* */
+}
+div.containerControlTwo div.hsbcStyleContent19 label,
+div.containerControlTwo div.hsbcStyleContent29 label,
+div.containerControlTwo div.hsbcStyleContent30 label
+{
+	color: #7C5F3D;
+}
+div.hsbcStyleContent29 input.extSmall,
+div.hsbcStyleContent30 input.extSmall
+{
+	width: 70px;
+}
+div.hsbcStyleContent19,
+div.hsbcStyleContent29,
+div.hsbcStyleContent30
+{
+	border: 1px solid #ccc;
+	padding: 11px 15px;
+}
+div.containerControlOne div.hsbcStyleContent19 h2,
+div.containerControlOne div.hsbcStyleContent29 h2,
+div.containerControlOne div.hsbcStyleContent30 h2,
+div.hsbcStyleContent20 h2
+{
+	padding-right: 240px;
+	padding-bottom: 11px;
+	font-weight: bold;
+	font-size: 118%;
+	/* \*/
+	font-size: 112%;
+	/* */
+}
+
+div.hsbcStyleContent20,
+div.hsbcStyleContent22,
+div.hsbcStyleContent24,
+div.hsbcStyleContent25,
+div.hsbcStyleContent27
+{
+	border-bottom: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	padding: 11px 15px;
+}
+
+
+div.hsbcStyleContent50
+{
+	background-color: #dfe4c1;
+}
+
+div.hsbcStyleContent20
+{
+	background-color: #F4F1E0;
+}
+div.hsbcStyleContent24
+{
+	background-color: #F2F9FC;
+}
+
+div.hsbcStyleContent22
+{
+	font-weight: bold;
+	font-size: 74%;
+	/* \*/
+	font-size: 69%;
+	/* */
+}
+div.hsbcStyleContent22 input
+{
+	float: right;
+}
+
+div.hsbcStyleContent21,
+div.hsbcStyleContent23,
+div.hsbcStyleContent26,
+div.hsbcStyleContent31
+{
+	border: 1px solid #ccc;
+	padding: 11px 15px;
+}
+div.hsbcStyleContent21
+{
+	background: url("../../images/common/luggage_bg.jpg") no-repeat bottom right;
+}
+div.hsbcStyleContent21 h2,
+div.hsbcStyleContent23 h2,
+div.hsbcStyleContent31 h2
+{
+	color: #4E7878;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 155%;
+	/* \*/
+	font-size: 150%;
+	/* */
+}
+
+div.hsbcStyleContent24 label
+{
+	color: #4E7878;
+	font-size: 118%;
+	/* \*/
+	font-size: 112%;
+	/* */
+	font-weight: bold;
+}
+div.hsbcStyleContent24 td.lowered
+{
+	border-top: 10px solid #F2F9FC;
+}
+
+div.hsbcStyleContent25
+{
+	font-size: 74%;
+	/* \*/
+	font-size: 69%;
+	/* */
+	color: #000;
+}
+div.hsbcStyleContent25 div.leftText
+{
+	width: 80%;
+	margin-bottom: 10px;
+}
+div.hsbcStyleContent25 div.rightImg
+{
+	width: 18%;
+	float: right;
+	padding-top: 5px;
+	text-align: right;
+}
+
+div.containerControlTwo div.hsbcStyleContent26
+{
+	background: url("../../images/common/currency_bg.jpg") no-repeat bottom right;
+}
+div.containerControlOne div.hsbcStyleContent26
+{
+	background: url("../../images/common/currency_full_bg.jpg") no-repeat bottom right;
+}
+div.containerControlOne div.hsbcStyleContent26 label
+{
+	margin-top: 4px;
+}
+div.containerControlOne div.hsbcStyleContent26 input
+{
+	padding-left: 226px;
+}
+div.hsbcStyleContent26
+{
+	padding-right: 105px;
+	color: #666;
+	font-weight: bold;
+	font-size: 74%;
+	/* \*/
+	font-size: 69%;
+	/* */
+}
+div.hsbcStyleContent26 label
+{
+	width: 226px;
+	float: left;
+}
+div.hsbcStyleContent26 select
+{
+	width: 180px;
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+div.hsbcStyleContent26 input.textual
+{
+	padding-left: 0px !important;
+	width: 176px;
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+
+div.containerControlOne div.hsbcStyleContent27 div.descriptionArea
+{
+	float: left;
+	width: 226px;
+	padding-top: 28px;
+}
+div.containerControlOne div.hsbcStyleContent27 div.resultArea
+{
+	float: left;
+	width: 484px;
+}
+div.hsbcStyleContent27
+{
+	background-color: #DFE4C1;
+}
+div.hsbcStyleContent27 h2
+{
+	color: #6F7454;
+	font-weight: bold;
+}
+div.hsbcStyleContent27 textarea
+{
+	margin-top: 5px;
+	font-family:Arial, Helvetica, sans-serif;
+	width: 298px;
+	height: 65px;
+	overflow: auto;
+	color: #6F7454;
+	font-weight: bold;
+	padding: 4px 7px;
+	font-size: 80%;
+	/* \*/
+	font-size: 75%;
+	/* */
+}
+
+div.hsbcStyleContent27 textarea.extended
+{
+	height: 105px;
+}
+
+div.hsbcStyleContent27 input
+{
+	margin-left: 4px;
+}
+
+div.hsbcStyleContent31
+{
+	padding-right: 120px;
+	background: #fff url("../../images/common/doctor_bg.jpg") no-repeat bottom right;
+}
+div.hsbcStyleContent31 select.extSelectWide
+{
+	width: 185px;
+}
+div.hsbcStyleContent31 h2
+{
+	padding-bottom: 0px;
+}
+div.hsbcStyleContent31 h3
+{
+	color: #4E7878;
+	font-weight: bold;
+	font-size: 118%;
+	/* \*/
+	font-size: 112%;
+	/* */
+}
+div.hsbcStyleContent31 input.imgButton
+{
+	margin-top: 15px;
+	padding-bottom: 3px;
+	display: block;
+}
+div.hsbcStyleContent31 label
+{
+	color: #4E7878;
+	font-weight: bold;
+	display: block;
+	margin-bottom: 2px;
+	font-size: 74%;
+	/* \*/
+	font-size: 69%;
+	/* */
+}
+div.hsbcStyleContent31 p
+{
+	margin-top: 0px;
+	padding-top: 0px;
+	color: #666;
+	font-size: 74%;
+	/* \*/
+	font-size: 69%;
+	/* */
+}
+
+/* Table classes
+ *
+---------------------------------------------------------------------------------------------- */
+
+.hsbcTableStyle01
+{
+	width: 90%;
+	wid\th: 100%;
+	border-collapse: collapse;
+	border: 0px;
+	margin-top: 10px;
+}
+.hsbcTableStyle01 td
+{
+	border: 0px;
+	margin: 0px; padding: 2px 0px;
+	width: 50%;
+	font-size: 86%;
+	/* \*/
+	font-size: 81%;
+	/* */
+}
+
+table.hsbcTableStyle02
+{
+	border-top:1px solid #ccc;
+	width:100%;
+}
+table.hsbcTableStyle02 caption,
+table.hsbcTableStyle02 .caption
+{
+	border-top:1px solid #ccc;
+	text-align:left;
+	padding:6px 10px;
+	background:url("../../images/common/bg_tablestyle02Caption.gif") top;
+}
+table.hsbcTableStyle02 caption span
+{
+	font-size:80%;
+	/* \*/
+	font-size:74%;
+	/* */
+	font-weight:bold;
+}
+
+table.hsbcTableStyle02 .caption span.theCaption
+{
+	font-size:110%;
+	/* \*/
+	font-size:110%;
+	/* */
+	font-weight:bold;
+}
+
+table.hsbcTableStyle02 caption span.hsbcAlign03
+{
+	font-size:74%;
+	/* \*/
+	font-size:68%;
+	/* */
+	font-weight:normal;
+	padding-top:3px;
+}
+table.hsbcTableStyle02 caption.extLarge
+{
+	padding:12px 10px;
+	background:url("../../images/common/bg_tablestyle02CaptionL.gif") top;
+}
+table.hsbcTableStyle02 th,
+table.hsbcTableStyle02 td
+{
+	border-top:1px solid #ccc;
+	padding:6px 3px 4px 7px;
+	font-size:74%;
+	/* \*/
+	font-size:68%;
+	/* */
+}
+table.hsbcTableStyle02 th
+{
+	font-weight:bold;
+	background:url("../../images/common/bg_tablestyle02Th.gif") top;
+}
+
+table.hsbcTableStyle02 th.pink
+{
+	/*background:url("../../images/common/bg_tablestyle02Caption.gif") top;*/
+	background:#FFF0F0;
+}
+
+table.hsbcTableStyle02 th.brown
+{
+	background:url("../../images/common/bg_tablestyle02Brown.gif") top;
+}
+
+table.hsbcTableStyle02 .extSolidBg
+{
+	background: none !important;
+	background-color: #ededed !important;
+}
+table.hsbcTableStyle02 .extNoTop
+{
+	border-top:0 !important;
+}
+table.hsbcTableStyle02 td
+{
+	background:url("../../images/common/bg_tablestyle02Td.gif") top;
+}
+table.hsbcTableStyle02 td img
+{
+	vertical-align:middle;
+	padding-right:8px;
+}
+table.hsbcTableStyle02 span.extPositive
+{
+	color:#393;
+	background:url("../../images/common/arrow_green_up.gif") no-repeat left;
+	padding-left:11px;
+	height:1%;
+}
+table.hsbcTableStyle02 span.extNegative
+{
+	color:#f00;
+	background:url("../../images/common/arrow_red_down.gif") no-repeat left;
+	padding-left:11px;
+	height:1%;
+}
+
+table td.hsbcTableColumn01
+{
+	background:url("../../images/common/bg_tablecolumn01Td.gif") repeat-x bottom;
+}
+
+table td.hsbcTableColumn02
+{
+	background:none;
+	background-color:#DFE4C1;
+	color:#666;
+	font-weight:bold;
+}
+
+table td.hsbcTableColumn02 input,
+table td.hsbcTableColumn02 select
+{
+	margin-right:5px;
+}
+
+table.hsbcTableStyle03
+{
+	width: 100%;
+}
+div.containerControlTwo table.hsbcTableStyle03 td
+{
+	font-size: 74%;
+	/* \*/
+	font-size: 69%;
+	/* */
+}
+div.containerControlOne table.hsbcTableStyle03 td
+{
+	font-size: 80%;
+	/* \*/
+	font-size: 75%;
+	/* */
+}
+div.hsbcStyleContent29 table.hsbcTableStyle03,
+div.hsbcStyleContent30 table.hsbcTableStyle03
+{
+	width: 70%;
+}
+table.hsbcTableStyle03 td
+{
+	font-weight:bold;
+	padding-bottom: 13px;
+}
+table.hsbcTableStyle03 select
+{
+	width: 250px;
+}
+
+.containerControlOne table.hsbcTableStyle03 select
+{
+	width:auto;
+}
+
+table.hsbcTableStyle04
+{
+	color:#666;
+	font-weight: bold;
+}
+table.hsbcTableStyle04 caption
+{
+	text-align: left;
+	font-size: 93%;
+	/* \*/
+	font-size: 87%;
+	/* */
+	font-weight: bold;
+	padding-bottom: 5px;
+}
+table.hsbcTableStyle04 label
+{
+	font-size: 74%;
+	/* \*/
+	font-size: 69%;
+	/* */
+	margin-right: 8px;
+	font-weight: bold;
+}
+table.hsbcTableStyle04 td.restrictedWidth
+{
+	width: 180px;
+}
+
+table.hsbcTableStyle05,
+table.hsbcTableStyle06
+{
+	width: 100%;
+	border: 1px solid #ccc;
+}
+table.hsbcTableStyle06 caption,
+table.hsbcTableStyle05 caption
+{
+	padding: 6px 10px;
+	background-color: #716D46;
+	color: #fff;
+	text-align: left;
+	font-weight: bold;
+	font-size: 80%;
+	/* \*/
+	font-size: 75%;
+	/* */
+}
+table.hsbcTableStyle06 caption a,
+table.hsbcTableStyle05 caption a
+{
+	float: right;
+	color: #fff;
+	font-size: 95%;
+}
+table.hsbcTableStyle06 caption
+{
+	background-color: #c50014;
+}
+table.hsbcTableStyle05 th
+{
+	padding: 6px 10px;
+	border-bottom: 1px solid #ccc;
+	background-color: #EDEDED;
+	font-weight: bold;
+	font-size: 80%;
+	/* \*/
+	font-size: 75%;
+	/* */
+	vertical-align: top;
+}
+table.hsbcTableStyle05 th span
+{
+	font-weight: normal;
+}
+table.hsbcTableStyle05 th.subHeader
+{
+	background-color: #FFEAEA;
+}
+table.hsbcTableStyle06 td,
+table.hsbcTableStyle05 td
+{
+	padding: 6px 10px;
+	border-bottom: 1px solid #ccc;
+	font-size: 74%;
+	/* \*/
+	font-size: 69%;
+	/* */
+}
+table.hsbcTableStyle06 td
+{
+	background-color: #fff;
+	font-size: 80%;
+	/* \*/
+	font-size: 75%;
+	/* */
+}
+table.hsbcTableStyle06 td span
+{
+	font-weight: bold;
+}
+
+table.hsbcTableStyle07
+{
+	text-align: left;
+	width: 100%;
+}
+table.hsbcTableStyle07 caption
+{
+	margin-top: 16px;
+	text-transform:uppercase;
+	text-align: left;
+	font-weight: bold;
+	border: 1px solid #ccc;
+	padding: 7px 10px;
+	background:url("../../images/common/bg_tablestyle02Thext.gif") repeat-x top left;
+	font-size: 80%;
+	/* \*/
+	font-size: 75%;
+	/* */
+}
+table.hsbcTableStyle07 th,
+table.hsbcTableStyle07 td
+{
+	padding: 7px 10px;
+	font-size: 80%;
+	/* \*/
+	font-size: 75%;
+	/* */
+}
+table.hsbcTableStyle07 th
+{
+	border-left: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+table.hsbcTableStyle07 td
+{
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+
+
+table.hsbcTableStyle09
+{
+	width: 100%;
+	margin-bottom: 16px;
+	text-align: left;
+	border: 1px solid #ccc;
+	font-size: 74%;
+	/* \*/
+	font-size: 69%;
+	/* */
+}
+table.hsbcTableStyle09 th
+{
+	background:url("../../images/common/bg_tablecolumn09Th.gif") top;
+}
+table.hsbcTableStyle09 td
+{
+	background-color: #fff;
+}
+table.hsbcTableStyle09 th,
+table.hsbcTableStyle09 td
+{
+	padding: 6px 10px;
+	border-bottom: 1px solid #ccc;
+}
+
+table.hsbcTableStyle10 th,
+table.hsbcTableStyle10 td
+{
+	padding: 3px 30px 3px 0px;
+	/*vertical-align:top;*/
+}
+/* TextStyle Classes
+ *
+---------------------------------------------------------------------------------------------- */
+/* Text Style - for legal text
+---------------------------------------------------------------------------------------------- */
+.hsbcTextStyle16
+{
+	font-size: 74%;
+	/* \*/
+	font-size: 68%;
+	/* */
+	color:#999 !important;
+}
+
+.hsbcFullBackground01 .hsbcTextStyle16,
+.hsbcFullBackground02 .hsbcTextStyle16,
+.hsbcFullBackground03 .hsbcTextStyle16,
+.hsbcFullBackground04 .hsbcTextStyle16,
+.hsbcFullBackground05 .hsbcTextStyle16,
+.hsbcFullBackground06 .hsbcTextStyle16,
+.hsbcFullBackground07 .hsbcTextStyle16,
+.hsbcFullBackground08 .hsbcTextStyle16,
+.hsbcFullBackground09 .hsbcTextStyle16
+{
+	color:#666 !important;
+}
+
+.hsbcTextStyle17
+{
+	font-size: 74%;
+	/* \*/
+	font-size: 69%;
+	/* */
+	color:#666;
+	font-weight: normal;
+}
+.hsbcTextStyle18
+{
+	font-size: 80%;
+	/* \*/
+	font-size: 75%;
+	/* */
+	color:#4E7878;
+}
+.hsbcTextStyle18 a
+{
+	color:#4E7878;
+}
+.hsbcTextStyle19
+{
+	color: #000;
+	font-size: 74%;
+	/* \*/
+	font-size: 69%;
+	/* */
+}
+.hsbcTextStyle20
+{
+	padding-right: 80px;
+	color: #7C5F3D;
+	font-weight: bold;
+	font-size: 118%;
+	/* \*/
+	font-size: 112%;
+	/* */
+}
+.hsbcTextStyle21
+{
+	padding: 8px 0px 16px; !important;
+	color: #2f5c82 !important;
+	font-size: 174% !important;
+	/* \*/
+	font-size: 169% !important;
+	/* */
+}
+
+.hsbcTextStyle22
+{
+	font-size: 118%;
+	/* \*/
+	font-size: 112%;
+	/* */
+	text-transform:none;
+}
+
+/* ******************************************************** */
+
+.hsbcTextStyle01
+{
+	color: #666;
+}
+/*
+ - 03 - just bold
+ - 09 - bold and underline
+ - 13 - bold underline and italic
+ - 10 - just italic
+ - 11 - italic and bold
+ - 14 - italic and underline
+ - 08 - just underline
+*/
+.hsbcTextStyle03,
+.hsbcTextStyle07,
+.hsbcTextStyle09,
+.hsbcTextStyle11,
+.hsbcTextStyle13
+{
+	font-weight: bold !important;
+}
+.hsbcTextStyle08,
+.hsbcTextStyle09,
+.hsbcTextStyle13,
+.hsbcTextStyle14
+{
+	text-decoration: underline;
+}
+.hsbcTextStyle10,
+.hsbcTextStyle11,
+.hsbcTextStyle13,
+.hsbcTextStyle14
+{
+	font-style: italic;
+}
+.hsbcTextStyle12
+{
+	font-size: 150%;
+	font-weight: bold;
+}
+.hsbcTextStyle15
+{
+	font-weight: normal !important;
+}
+.hsbcTextStyle16
+{
+	color: #f00;
+}
+
+.hsbcLinkStyle09
+{
+	color: #666;
+}
+.hsbcLinkStyle12
+{
+	text-decoration: none;
+	margin-bottom: 2px !important;
+}
+
+/* ****************************************** */
+
+div.hsbcFlexStyle02 ul
+{
+	margin-bottom: 16px;
+}
+div.hsbcFlexStyle02 table
+{
+	border-top: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+}
+div.hsbcFlexStyle02 table td,
+div.hsbcFlexStyle02 table th
+{
+	border-bottom: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	padding: 7px 10px;
+	vertical-align: top;
+	text-align: left;
+	font-weight: normal;
+}
+/* hsbcTextStyle01 - 11pt text */
+.hsbcSizeText01
+{
+	font-size: 74% !important;
+	/* \*/
+	font-size: 69% !important;
+	/* */
+}
+/* hsbcTextStyle02 - 12pt text - default */
+.hsbcSizeText02
+{
+	font-size: 80% !important;
+	/* \*/
+	font-size: 75% !important;
+	/* */
+}
+/* hsbcTextStyle03 - 13pt text */
+.hsbcSizeText03
+{
+	font-size: 86% !important;
+	/* \*/
+	font-size: 81% !important;
+	/* */
+}
+/* hsbcTextStyle04 - 14pt text */
+.hsbcSizeText04
+{
+	font-size: 93% !important;
+	/* \*/
+	font-size: 87% !important;
+	/* */
+}
+/* hsbcTextStyle05 - 18pt text */
+.hsbcSizeText05
+{
+	font-size: 118% !important;
+	/* \*/
+	font-size: 112% !important;
+	/* */
+}
+/* hsbcTextStyle08 - 20pt text */
+.hsbcSizeText08
+{
+	font-size: 124% !important;
+	/* \*/
+	font-size: 119% !important;
+	/* */
+}
+/* hsbcTextStyle06 - 24pt text */
+.hsbcSizeText06
+{
+	font-size: 155% !important;
+	/* \*/
+	font-size: 150% !important;
+	/* */
+}
+/* hsbcTextStyle07 - 30pt text */
+.hsbcSizeText07
+{
+	font-size: 174% !important;
+	/* \*/
+	font-size: 169% !important;
+	/* */
+}
+.hsbcColorText01
+{
+	color: #000 !important;
+}
+.hsbcColorText02
+{
+	color: #fff;
+}
+.hsbcColorText03
+{
+	color: #f00 !important;
+}
+.hsbcColorText04
+{
+	color: #333;
+}
+.hsbcColorText05
+{
+	color: #999;
+}
+div.hsbcBackground01
+{
+	background: url("../../images/common/faded_bg.jpg") no-repeat bottom right !important;
+	padding-bottom: 16px !important;
+}
+div.hsbcActions
+{
+	padding-top: 14px;
+	/* \*/
+	padding-top: 4px;
+	/* */
+	text-transform:uppercase;
+	font-weight: bold;
+	font-size: 68%;
+	/* \*/
+	font-size: 62%;
+	/* */
+	margin-bottom:2px;
+	padding-right:10px;
+}
+
+span.hsbcActions
+{
+	text-transform:uppercase;
+	font-size: 94%;
+}
+
+
+
+div.hsbcActions a,
+span.hsbcActions a
+{
+	text-decoration: none;
+}
+div.hsbcBackground07
+{
+	background-color: #f9eeee;
+}
+div.hsbcBackground07 h2,
+div.hsbcBackground07 a
+{
+	color: #973131;
+}
+div.hsbcBackground07 ul
+{
+	list-style: none;
+}
+div.hsbcBackground07 ul li
+{
+	background: url("../../images/common/disc_red_pink.gif") no-repeat top left;
+}
+div.hsbcBackground09
+{
+	background-color: #eff1e0;
+}
+div.hsbcBackground09 a,
+div.hsbcBackground09 h2,
+div.hsbcBackground09 h3
+{
+	color: #716d46;
+}
+div.hsbcBackground10
+{
+	background: url("../../images/common/cards_bg2.jpg") no-repeat bottom right;
+}
+div.hsbcBackground11 h2,
+div.hsbcBackground11 a,
+div.hsbcBackground10 h2,
+div.hsbcBackground10 p
+{
+	color: #bc7507;
+}
+div.hsbcBackground11
+{
+	background-color: #faf0e4;
+}
+div.hsbcBackground12
+{
+	background-color: #f6f3e8;
+}
+div.hsbcBackground12 h2,
+div.hsbcBackground12 a
+{
+	color: #7c5f3d;
+}
+div.hsbcBackground12 ul
+{
+	list-style: none;
+}
+div.hsbcBackground12 ul li
+{
+	background: url("../../images/common/disc_brown.gif") no-repeat top left;
+}
+div.hsbcBackground13
+{
+	background: url("../../images/common/mortgages_bg.jpg") no-repeat bottom right;
+}
+div.hsbcBackground13 h2,
+div.hsbcBackground13 p
+{
+	color: #7c5f3d;
+}
+div.hsbcBackground14
+{
+	background: url("../../images/common/loans_bg.jpg") no-repeat bottom right;
+}
+div.hsbcBackground14 h2,
+div.hsbcBackground14 p
+{
+	color: #64546c;
+}
+div.hsbcBackground15
+{
+	background-color: #efeef0;
+}
+div.hsbcBackground15 h2,
+div.hsbcBackground15 p
+{
+	color: #676767;
+}
+div.hsbcBackground15 a
+{
+	color: #973131;
+}
+div.hsbcBackground16
+{
+	background: url("../../images/common/insurance_bg.jpg") no-repeat bottom right;
+}
+div.hsbcBackground17 h2,
+div.hsbcBackground17 a,
+div.hsbcBackground16 h2,
+div.hsbcBackground16 p
+{
+	color: #4e7878;
+}
+div.hsbcBackground17
+{
+	background-color: #eef3f1;
+}
+div.hsbcBackground17 ul
+{
+	list-style: none;
+}
+div.hsbcBackground17 ul li
+{
+	background: url("../../images/common/disc_green.gif") no-repeat top left;
+}
+div.hsbcBackground18
+{
+	background: url("../../images/common/financial_planning_bg.jpg") no-repeat bottom right;
+}
+div.hsbcBackground19 h2,
+div.hsbcBackground19 p,
+div.hsbcBackground18 h2,
+div.hsbcBackground18 p
+{
+	color: #545776;
+}
+div.hsbcBackground19
+{
+	background-color: #ebebf9;
+}
+div.hsbcBackground20
+{
+	background: url("../../images/common/international_bg.jpg") no-repeat bottom right;
+}
+div.hsbcBackground21 h2,
+div.hsbcBackground21 a,
+div.hsbcBackground21 label,
+div.hsbcBackground20 h2,
+div.hsbcBackground20 p
+{
+	color: #436983;
+}
+div.hsbcBackground21
+{
+	background-color: #f0f5f8;
+}
+div.hsbcBackground22
+{
+	background: url("../../images/common/backgrounds/bg_full_cards_pink.gif") no-repeat top left;
+}
+
+
+
+ul.hsbcListStyle02
+{
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	font-size: 80% !important;
+	/* \*/
+	font-size: 75% !important;
+	/* */
+}
+ul.hsbcListStyle02 li
+{
+	color: #fff;
+	list-style: none;
+	margin-top: 2px;
+	font-weight: bold;
+	background: #f00 url("../../images/common/arrow_invert_trans.gif") no-repeat top left !important;
+	padding: 3px 19px 4px !important;
+}
+ul.hsbcListStyle02 li a
+{
+	color: #fff;
+	text-decoration: none;
+}
+
+ul.hsbcListStyle03
+{
+	list-style: none;
+	margin: 0px !important;
+	padding: 0px;
+	width: 170px;
+	font-size: 74%;
+	/* \*/
+	font-size: 69%;
+	/* */
+}
+ul.hsbcListStyle03 li
+{
+	background: url("../../images/common/brown_arrow.gif") no-repeat top left !important;
+	padding-left: 7px !important;
+}
+ul.hsbcListStyle04 a,
+ul.hsbcListStyle03 a
+{
+	text-decoration: none;
+}
+ul.hsbcListStyle04 li
+{
+	background: url("../../images/en/arrow_red_right_small.gif") no-repeat top left !important;
+	padding-left: 9px !important;
+	padding-top: 1px;
+	margin-bottom: 4px;
+}
+ul.hsbcListStyle04 li a
+{
+	font-weight: bold;
+}
+
+ul.hsbcListStyle05
+{
+	width: 100%;
+	list-style: none;
+}
+ul.hsbcListStyle05 li
+{
+	background: #f0f0f0 !important;
+	padding: 4px 10px;
+	margin-bottom: 2px;
+}
+
+div.pageList
+{
+	margin-top: 15px;
+	margin-bottom: 5px;
+	font-size: 74%;
+	/* \*/
+	font-size: 69%;
+	/* */
+	color: #979797;
+}
+div.pageList span
+{
+	color: #656565;
+	font-weight: bold;
+}
+div.pageList a
+{
+	color: #979797;
+}
+div.hsbcDottedBorder
+{
+	background: url("../../images/common/dotted_pink.gif") repeat-x bottom left;
+	margin-bottom: 5px !important;
+	padding-bottom: 5px !important;
+}
+
+
+/* ***************************************************************** */
+
+
+.hsbcSpacing02
+{
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+.hsbcSpacing03
+{
+	padding-bottom: 0px !important;
+	margin-bottom: 0px !important;
+}
+.hsbcSpacing04
+{
+	padding-top: 16px !important;
+}
+.hsbcSpacing05
+{
+	margin-top: 8px !important;
+}
+.hsbcSpacing06
+{
+	margin-left: 22px;
+}
+.hsbcSpacing09
+{
+	padding-bottom: 8px !important;
+}
+.hsbcSpacing10
+{
+	margin-top: 4px !important;
+	margin-bottom: 0px !important;
+}
+.hsbcSpacing12
+{
+	margin: 0px !important;
+	padding: 0px !important;
+	padding: 0px 0px 16px 0px !important;
+}
+.hsbcSpacing13
+{
+	margin-top: 15px;
+}
+.hsbcSpacing14
+{
+	margin-top: 20px;
+}
+.hsbcSpacing15
+{
+	margin-top: 16px !important;
+}
+.hsbcSpacing18,
+.hsbcSpacing16
+{
+	padding: 0px !important;
+	margin:  0px !important;
+	padding-top: 1px;
+}
+.hsbcSpacing17
+{
+	margin-top: 2px;
+	margin-right: 10px;
+}
+.hsbcSpacing18
+{
+	padding-right: 100px !important;
+}
+.hsbcSpacing19
+{
+	margin-top: 6px;
+	padding-bottom: 10px;
+}
+.hsbcSpacing20
+{
+	margin-right: 12px;
+}
+.hsbcSpacing21
+{
+	padding: 10px 13px;
+	margin-bottom: 16px;
+}
+.hsbcSpacing22
+{
+	padding-top: 8px !important;
+	/* \*/
+	padding-top: 4px !important;
+	/* */
+}
+.hsbcSpacing24
+{
+	margin-left: 4px !important;
+}
+.hsbcSpacing25
+{
+	padding-top: 8px !important;
+}
+.hsbcSpacing26
+{
+	padding-top: 16px !important;
+}
+.hsbcSpacing27
+{
+	margin: 0px !important;
+	padding: 0px !important;
+}
+.hsbcSpacing28
+{
+	margin-left: 16px !important;
+}
+.hsbcSpacing29
+{
+	margin-bottom: 16px !important;
+}
+.hsbcSpacing29
+{
+	padding: 16px 5px !important;
+}
+.hsbcSpacing30
+{
+	padding: 7px 0px 0px !important;
+}
+.hsbcSpacing35
+{
+	padding-right: 100px !important;
+}
+.hsbcSpacing36
+{
+	padding: 10px 13px;
+}
+.hsbcSpacing37
+{
+	padding-bottom: 16px;
+}
+
+.hsbcSpacing38
+{
+	padding-right: 0px !important;
+}
+
+.hsbcSpacing39
+{
+	padding:0!important;
+	margin: 16px 0px!important;
+}
+
+.hsbcSpacing40
+{
+	padding-right:12px!important;
+}
+
+.hsbcSpacing41
+{
+	margin-top: 6px;
+}
+.hsbcAlign03
+{
+	float: right;
+}
+.hsbcAlign04
+{
+	float: left;
+	padding:0px; margin: 0px;
+	position: relative;
+	left: 0;
+}
+.hsbcAlign05
+{
+	text-align:center;
+}
+.hsbcAlign06
+{
+	text-align:left;
+}
+.hsbcAlign07
+{
+	text-align:right !important;
+}
+.hsbcAlign08
+{
+	float: left;
+	width:100%;
+}
+
+/* ****************************************************************** */
+
+
+h2 a,
+h3 a
+{
+	text-decoration: none;
+	position:relative;	/* NOT TESTED!!! */
+}
+div.hsbcContent a:hover
+{
+	text-decoration: underline;
+}
+
+.extSizeAuto {
+	width:auto !important;
+	height:auto !important;
+}
+
+.extWidth200 {
+	width:200px !important;
+}
+
+.extNoBorderTop
+{
+	border-top:0 !important;
+}
+
+.extNoBold
+{
+	font-weight:normal !important;
+}
+
+.extBorderBottom
+{
+	border-bottom:1px solid #ccc !important;
+}
+
+.extGraph
+{
+	text-align:center;
+	padding:20px 0px;
+	background:#fff !important;
+
+}
+
+
+.hsbcBackgroundStyle04
+{
+	background:#fff !important;
+}
+
+.hsbcBackgroundStyle04 p
+{
+	color:#f00;
+	font-weight:bold;
+}
+
+.hsbcPersonalNavStyle
+{
+	margin-top:10px;
+	padding-top:160px;
+	padding-left:10px;
+	background:url("../../images/en/bg_personalhome.jpg") no-repeat top left;
+}
+
+.hsbcPersonalNavStyle h3
+{
+	font-size: 150%;
+}
+
+.extBasicForm {
+	float:left;
+
+}
+
+.extBasicForm .hsbcInputSection {
+	float:left;
+	clear:left;
+	padding:3px 0px;
+	width:700px;
+}
+
+.extBasicForm .hsbcInputSection label{
+	float:left;
+	display:block;
+	width:250px;
+	font-size: 75% !important;
+	padding:3px 3px 0px 0px;
+	color:#666;
+}
+
+.extBasicForm .hsbcInputSection span.result{
+	float:left;
+	display:block;
+	font-size: 75% !important;
+	padding:3px 3px 0px 0px;
+	color:#666;
+}
+
+.extBasicForm .hsbcInputSection input,
+.extBasicForm .hsbcInputSection select{
+	float:left;
+	display:block;
+	margin:2px 0px 2px 0px;
+	padding:0px 0px;
+}
+
+.extBasicForm .hsbcInputSection input{
+	width:150px;
+}
+
+.extBasicForm .hsbcInputSection .checkbox,
+.extBasicForm .hsbcInputSection .radio{
+	float:left;
+	display:block;
+	margin:4px 4px 4px 0px !important;
+	_margin:0px;
+	padding:0px 0px;
+}
+
+.extBasicForm .hsbcInputSection textarea{
+	float:left;
+	display:block;
+	margin:4px 4px 4px 0px !important;
+	padding:0px 0px;
+}
+
+.extBasicForm .hsbcInputSection .noWidth{
+	width:auto;
+}
+
+.extRed {
+	color:#f00 !important;
+}
+
+.extVertAlignCenter {
+	vertical-align:middle;
+}
+
+h1.ipoAppHeader {
+	font-size: 75% !important;
+	color: #666 !important;
+}
+
+h2.ipoAppHeader {
+	background:#d7d7d7;
+	padding:5px !important;
+	font-size: 75% !important;
+	font-weight:bold !important;
+}
+
+.ext2ColForm .hsbcInputSection{
+	width:300px;
+}
+
+.ext2ColForm .hsbcInputSection label {
+	width:100px;
+}
+
+.ext2ColForm .hsbcInputSection input{
+	width:auto;
+}
+
+a.languageChange {
+	display:block;
+	padding:0px;
+	margin:0px 10px 0px 0px;
+	color: #666;
+	text-decoration:none;
+	font-size: 82%;
+}
+
+a.languageChange:hover {
+	color: #f00;
+}
+
+
+.hsbcContent ul.listWithSub li ul
+{
+	font-size: 100% !important;
+}
+
+.hsbcPromoWrapper {
+	border-top:1px solid #ccc;
+	padding-top:16px!important;
+}
+
+div.hsbcBoxStyle01 {
+	background:#fff;
+	margin:0px 0px 4px 0px;
+	padding:4px 8px 16px 8px;
+}
+
+div.hsbcBoxStyle01 h2,
+div.hsbcBoxStyle01 p {
+	padding:8px 0px 0px 0px!important;
+	margin:0px!important;
+}
+
+
+.rightColumn .hsbcRow .hsbcContent .hsbcBoxStyle01 h3
+{
+	margin:0px 0px 0px 0px !important;
+	padding:12px 0px 0px 0px !important;
+}
+
+.rightColumn .hsbcRow .hsbcContent .hsbcBoxStyle01 ul
+{
+	margin:0px 0px 0px 0px !important;
+	padding:2px 0px 0px 0px !important;
+}
+
+div.hsbcBoxStyle01 h2 span {
+	color:#f00;
+}
+
+
+div.rightColumn .hsbcContent {
+	margin-top:15px!important;
+	padding:4px 4px 2px 4px !important;
+	background:#ccc;
+}
+
+/*
+----------------------------------------------------------------------------------------------
+HSBC UK Commercial CONTAINERS StyleSheet
+Author:   Gordon Dougal
+Created:  23 May 2005
+Updated:  16 August 2006
+
+History:
+	Created top level container CSS based on International.
+
+---------------------------------------------------------------------------------------------- */
+
+/* Top Level Containers
+---------------------------------------------------------------------------------------------- */
+div.containerGlobal
+{
+	/*width: 760px;*/
+	width:985px;
+}
+div.containerControlPopup
+{
+	width: 100% !important;
+}
+
+div.containerControlPopup .containerMain
+{
+	width: 985px;
+}
+
+div.containerPopupBar
+{
+	float: left;
+	width: 100%;
+	background:url("../../images/common/tab_bg.gif") repeat-x left bottom;
+	height: 10px;
+	line-height:1px;
+}
+div.containerLogoArea
+{
+	width: 350px;
+	float: left;
+	clear:left;
+}
+div.containerTabMenu
+{
+	width:100%;
+	float:left;
+}
+div.containerFooter
+{
+	width: 100%;
+	float: left;
+}
+div.containerEntity
+{
+	width: 100%;
+	clear: both;
+}
+div.containerMain
+{
+	width: 100%;
+	float:left;
+}
+div.containerPageInformation
+{
+	width: 100%;
+	float: left;
+}
+
+div.containerControlOne,
+div.containerControlHomeFull
+{
+	float:left;
+}
+
+/* Left column only   | |      |
+---------------------------------------------------------------------------------------------- */
+div.containerControlLeft
+{
+
+}
+div.hsbcPageBgStyle
+{
+	background: url("../../images/common/background01.gif") repeat-y top left;
+}
+div.containerControlLeft div.containerLeftNav
+{}
+div.containerControlLeft div.hsbcContent
+{}
+div.containerControlLeft div.containerContent
+{
+	/*width:619px;*/
+	width:791px;
+	float:left;
+	/* \*/
+	width:792px;
+	/*width:620px;*/
+	/* */
+}
+div.containerControlLeft div.containerControlHomeFull
+{
+	position: relative;
+	background: url("../../images/common/home_back_ext.gif") repeat-x top left;
+	z-index: 1;
+	margin-bottom: 10px;
+	margin-left: -140px;
+	padding-left: 140px;
+}
+div.containerControlLeft div.containerControlOne div.hsbcColumn
+{
+	/*width:619px;*/
+	width:791px;
+	/* \*/
+	width:792px;
+	/*width:620px;*/
+	/* */
+}
+div.containerControlLeft div.containerControlTwo div.hsbcColumn
+{
+	/*width:309px;*/
+	width:395px;
+	/* \*/
+	width:396px;
+	/*width:310px;*/
+	/* */
+}
+div.containerControlTwo
+{
+	float: left;
+}
+div.containerHomeLeft img
+{
+	position: relative;
+	margin-top: 32px;
+	margin-left: 0px;
+	padding-left: 0px;
+	margin-right: -16px;
+	float: left;
+	z-index: 2
+}
+
+
+/* Column, Content and Left div's
+---------------------------------------------------------------------------------------------- */
+div.hsbcColumn
+{
+	float:left;
+}
+div.hsbcContent
+{
+	margin-left:0px;
+	padding: 0px 0px 0px 16px;
+	width:auto;
+	float:none;
+}
+div.containerLeftNav
+{
+	/*width: 140px;*/
+	width:193px;
+	float:left;
+	padding-top: 2em;
+	background-color: #fff;
+}
+div.hsbcRow
+{
+	/* \*/
+	clear: both;
+	/* */
+}
+
+/*
+----------------------------------------------------------------------------------------------
+HSBC UK Commercial DIVLETS StyleSheet
+Author:   Gordon Dougal
+Created:  23 May 2005
+Updated:  16 August 2006
+
+History:
+23 May 2005
+	Copied logo, search, footer, entity and tab divlet from international build, and removed
+	legacy styles
+
+---------------------------------------------------------------------------------------------- */
+
+/* LOGO DIVLET
+---------------------------------------------------------------------------------------------- */
+div.hsbcDivletLogo
+{
+	height:52px;
+	width:500px;
+}
+div.hsbcDivletLogo .hsbcDivletLogoImage
+{
+	padding:13px 0px 0px 10px;
+	float:left;
+	width:auto;
+}
+div.hsbcDivletLogo .hsbcDivletLogoTagLine
+{
+	float:left;
+	vertical-align:middle;
+	padding:18px 0px 0px 12px;
+	font:bold 14px Arial, Helvetica, sans-serif;
+	color:#f00;
+	display:none;
+}
+
+/* SEARCH DIVLET
+---------------------------------------------------------------------------------------------- */
+div.hsbcDivletSearch
+{
+	float:right;
+	text-align:right;
+	/* mac-ie */
+	font-size:86%;
+	/*non-mac-ie \*/
+	font-size:82%;
+	/* */
+	margin-top:13px;
+	padding-right:6px;
+}
+div.hsbcDivletSearch label
+{
+	color:#000;
+}
+div.hsbcDivletSearch input
+{
+	vertical-align:middle;
+}
+div.hsbcDivletSearch a
+{
+	color:#000;
+	text-decoration:none;
+}
+div.hsbcDivletSearch a:hover
+{
+	color:#f00;
+	text-decoration:none;
+}
+
+/* TABMENU DIVLET
+---------------------------------------------------------------------------------------------- */
+div.hsbcDivletTabMenu
+{
+	background:url("../../images/common/tab_bg.gif") repeat-x left bottom;
+	height:44px;
+	width:100%;
+	clear:left;
+}
+div.hsbcDivletTabMenu ul
+{
+	margin:0px;
+	padding:0px;
+}
+div.hsbcDivletTabMenu ul li
+{
+	margin:0px;
+	padding:0px 0px 0px 6px;
+	list-style:none;
+	float:left;
+	height:44px;
+	background:url("../../images/common/tab_off_left.gif") no-repeat top left;
+	text-align:center;
+}
+div.hsbcDivletTabMenu ul li a,
+div.hsbcDivletTabMenu ul li span.extNoLink
+{
+	padding:0px 9px 0px 2px;
+	margin:0px;
+	height:44px;
+	line-height:36px;
+	float:left;
+	display:block;
+	background:url("../../images/common/tab_off_right.gif") no-repeat top right;
+	text-decoration:none;
+	color:#666;
+	/* mac-ie */
+	font-size:74%;
+	/*non-mac-ie \*/
+	font-size:69%;
+	/* */
+	font-weight:bold;
+	vertical-align:50%;
+}
+div.hsbcDivletTabMenu ul li a:hover
+{
+	color:#f00 !important;
+	text-decoration:none;
+}
+div.hsbcDivletTabMenu ul li.hsbcDivletTabMenuSelected
+{
+	background:url("../../images/common/tab_on_left.gif") no-repeat top left;
+}
+div.hsbcDivletTabMenu ul li.hsbcDivletTabMenuSelected a
+{
+	background:url("../../images/common/tab_on_right.gif") no-repeat top right;
+	color:#f00;
+}
+div.hsbcDivletTabMenu ul li.extFirstTab
+{
+	background:url("../../images/common/first_tab_off_left.gif") no-repeat top left;
+	padding-left:15px;
+}
+div.hsbcDivletTabMenu ul li.extFirstTabSelected
+{
+	background:url("../../images/common/first_tab_on_left.gif") no-repeat top left;
+	padding-left:15px;
+}
+div.hsbcDivletTabMenu ul li.extFirstTabSelected a
+{
+	background:url("../../images/common/tab_on_right.gif") no-repeat top right;
+	color:#f00;
+}
+div.hsbcDivletTabMenu ul li.extSelectedTabRight
+{
+	background:url("../../images/common/tab_off_left_selected_right.gif") no-repeat top left;
+}
+div.hsbcDivletTabMenu ul li.extSelectedTabRight a
+{
+	background:url("../../images/common/tab_off_right_selected_right.gif") no-repeat top right;
+}
+div.hsbcDivletTabMenu ul li.extSelectedTabLeft
+{}
+div.hsbcDivletTabMenu ul li.extSelectedTabLeft a
+{
+	background:url("../../images/common/tab_off_right_selected_left.gif") no-repeat top right;
+}
+div.hsbcDivletTabMenu ul li.extLastTabSelected
+{
+	background:  url("../../images/common/tab_on_left.gif") no-repeat top left;
+}
+div.hsbcDivletTabMenu ul li.extLastTabSelected a
+{
+	background: url("../../images/common/last_tab_on_right.gif") no-repeat top right;
+	padding-right:34px;
+	color:#f00;
+}
+div.hsbcDivletTabMenu ul li.extRightAlignTab
+{
+	float:right;
+	padding-right:10px;
+}
+div.hsbcDivletTabMenu ul li.extRightAlignTabSelected
+{
+	background: url("../../images/common/first_tab_on_left.gif") no-repeat top left;
+	float:right;
+	padding-left:15px;
+	padding-right:0px;
+}
+div.hsbcDivletTabMenu ul li.extRightAlignTabSelected a
+{
+	background:url("../../images/common/right_align_tab_on_right.gif") no-repeat top right;
+	padding-right:20px;
+	padding-left:3px;
+	color:#f00;
+}
+div.hsbcDivletTabMenu ul li.extSelectedTabRightEndBlock
+{
+	background:url("../../images/common/tab_off_left_selected_right_end_block.gif") no-repeat top left;
+}
+div.hsbcDivletTabMenu ul li a.extDoubleLine
+{
+	line-height:13px;
+	padding-top:4px;
+	/* FIX FOR:PC IE5.5 and PC IE5.01 */
+	height:44px;
+	hei\ght:40px;
+}
+div.hsbcDivletTabMenu ul li a .extMacIE
+{
+	float:left;
+	clear:left;
+	padding-top:0px;
+	padding-bottom:-10px;
+	/*FIX FOR:MAC IE \*/
+	float:none;
+	clear:none;
+	padding-top:0px;
+	/* */
+}
+
+
+
+div.hsbcDivletTabMenu ul li.extNoTab
+{
+	background:none !important;
+}
+div.hsbcDivletTabMenu ul li.extNoTab a
+{
+	background:none !important;
+	padding:0px !important;
+	padding-right:3px !important;
+	font-weight:normal;
+}
+div.hsbcDivletTabMenu ul li span.extNoLink
+{
+	background:none !important;
+	padding:0px !important;
+	padding-right:3px !important;
+}
+
+/* LOGON DIVLET
+---------------------------------------------------------------------------------------------- */
+div.hsbcDivletLogon
+{
+	float: right;
+	white-space: nowrap;
+	height:2em;
+}
+div.hsbcDivletLogon p
+{
+	float: left;
+	font-size: 74%;
+	margin: 10px 6px 5px;
+	/* \*/
+	font-size: 69%;
+	margin: 9px 6px 4px 3px;
+	/* */
+}
+div.hsbcDivletLogon img
+{
+	float: left;
+	margin-right: 8px;
+	margin-top:-1px;
+}
+/* FOOTER DIVLET
+---------------------------------------------------------------------------------------------- */
+div.hsbcDivletFooterLinks
+{
+	width:100%;
+	float:left;
+	margin:16px 0px 16px;
+	background-color:#eee;
+	color:#333;
+	line-height:180%;
+	padding:0px;
+}
+div.containerControlPopup div.hsbcDivletFooterLinks
+{
+	margin: 16px 0px 0px !important;
+}
+div.hsbcDivletFooterLinks p
+{
+	/* mac-ie */
+	font-size:68%;
+	/*non-mac-ie \*/
+	font-size:64%;
+	/* */
+	color:#333;
+	line-height:180%;
+	padding:0px;
+	margin:0px;
+}
+div.hsbcDivletFooterLinks p a
+{
+	color:#333;
+	text-decoration:none;
+}
+div.hsbcDivletFooterLinks p a:hover
+{
+	text-decoration:underline;
+}
+div.hsbcDivletFooterLinks p span.hsbcDivletFooterLinksLeft
+{
+	float:left;
+	margin-left:10px;
+}
+div.hsbcDivletFooterLinks p span.hsbcDivletFooterLinksRight
+{
+	float:right;
+	margin-right:10px;
+}
+
+/* ENTITY DIVLET
+---------------------------------------------------------------------------------------------- */
+
+div.hsbcEntity
+{
+	/*width: 742px;*/
+	width:967px;
+	float:left;
+	background:#eee url("../../images/common/divlets/bgEntityTabBack.gif") repeat-x bottom left;
+
+	/* mac-ie */
+	font-size:68%;
+	/*non-mac-ie \*/
+	font-size:61%;
+	clear:both;
+	/* */
+	padding: 0px 7px 0px 11px ;
+}
+
+div.hsbcEntity div.hsbcEntityTextArea01
+{
+	float:left;
+	padding: 3px 0px 0px;
+}
+
+div.hsbcEntity div.hsbcEntityTextArea02
+{
+	float:right;
+}
+div.hsbcEntity ul
+{
+	display: inline;
+	padding: 0px;
+	margin: 0px;
+
+
+}
+div.hsbcEntity ul li
+{
+	float: left;
+	list-style: none;
+	padding: 3px 16px 3px 0px;
+	margin: 0px;
+	background: url("../../images/common/divlets/bgEntityTabDivider.gif") no-repeat right;
+
+	/*height: 18px;*/
+}
+div.hsbcEntity ul li a
+{
+
+}
+div.hsbcEntity ul li a:hover
+{
+	color: #f00;
+	text-decoration: none;
+}
+div.hsbcEntity ul li.hsbcEntityTabSelectedLeft
+{
+	padding: 3px 0px 0px;
+	background: none;
+}
+div.hsbcEntity ul li.hsbcEntityTabLastTab
+{
+	background: none;
+	padding: 3px 13px 0px 0px;
+}
+
+div.hsbcEntity a
+{
+	color:#333;
+	text-decoration:none;
+}
+div.hsbcEntity a:hover
+{
+	color:#333;
+	text-decoration:underline;
+}
+div.hsbcEntity ul li.hsbcEntityTabSelected
+{
+	padding: 3px 0px 3px 14px;
+	background: url("../../images/common/divlets/bgEntityTabLeft.gif") no-repeat bottom left;
+}
+div.hsbcEntity ul li.hsbcEntityTabSelected a
+{
+	background: url("../../images/common/divlets/bgEntityTabSlider.gif") no-repeat bottom right;
+	padding: 3px 14px 3px 0px;
+	color: #F00;
+	/*display: block;
+	height: 18px;*/
+	\margin-top: -3px;
+}
+div.hsbcEntity ul li.hsbcEntityTabSelected a:hover
+{
+	color:#F00;
+}
+
+/* LEFT NAVIGATION DIVLET
+---------------------------------------------------------------------------------------------- */
+div.hsbcDivletNavigation
+{
+      background-color:#fff;
+      background: none;
+      /* mac-ie */
+      font-size:74%;
+      /*non-mac-ie \*/
+      font-size:69%;
+      /* */
+}
+.hsbcDivletNavImage00
+{
+      background: none;
+      padding-top: 0px !important;
+      border-top: 1px solid #ccc;
+}
+
+.hsbcDivletNavImage01
+{
+      background: none;
+      padding-top: 0px !important;
+      border-top: 1px solid #e5e5e5;
+}
+
+div.hsbcDivletNavigation .hsbcDivletNavTitle
+{
+	background: #eee;
+	padding: 34px 10px 5px;
+	font-weight: bold;
+}
+div.hsbcDivletNavigation ul
+{
+	background: #eee;
+	padding: 0px;
+	margin: 0px;
+}
+div.hsbcDivletNavigation ul li
+{
+	list-style: none;
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #e5e5e5;
+	padding: 6px 11px 7px !important;
+	margin:0px;
+	font-weight: normal;
+	/*line-height: 1.6em;*/
+	color: #666;
+}
+div.hsbcDivletNavigation ul.hsbcDivletNavList
+{
+	background:#fff url("../../images/common/bg_navlist.gif") no-repeat bottom left;
+}
+div.hsbcDivletNavigation ul.hsbcDivletNavList li
+{
+	border-top: 0px;
+}
+div.hsbcDivletNavigation ul.hsbcDivletNavList li a:hover
+{
+	color: #f00;
+}
+div.hsbcDivletNavigation ul.hsbcDivletNavList li ul
+{
+	background: #fff;
+	margin-top: 3px !important;
+}
+div.hsbcDivletNavigation ul.hsbcDivletNavList li ul li
+{
+	border: 0px;
+	background: url("../../images/en/arrow_red_right_small.gif") no-repeat top left;
+	padding: 5px 0px 2px 8px !important;
+	/* \*/
+	padding: 4px 0px 2px 8px !important;
+	/* */
+	margin:2px 0px 3px 0px;
+	font-weight: normal;
+}
+div.hsbcDivletNavigation a
+{
+	color: #666;
+	text-decoration: none;
+}
+div.hsbcDivletNavigation a:hover
+{
+	text-decoration: underline;
+}
+
+/* for navigation highlight in red if selected */
+div.hsbcDivletNavigation a.hsbcDivletNavigationSelected
+{
+	font-weight: bold;
+	color: #f00;
+}
+
+div.hsbcDivletNavigation .hsbcDivletNavList li.hsbcDivletNavigationSelected a,
+div.hsbcDivletNavigation .hsbcDivletNavList li.hsbcDivletNavigationSelected ul li.hsbcDivletNavigationSelected a,
+div.hsbcDivletNavigation .hsbcDivletNavList li.hsbcDivletNavigationSelected a,
+{
+	color: #f00;
+}
+
+div.hsbcDivletNavigation .hsbcDivletNavList li.hsbcDivletNavigationSelectedWithChildren ul li a
+{
+	color: #666;
+}
+
+div.hsbcDivletNavigation .hsbcDivletNavList li.hsbcDivletNavigationSelectedWithChildren ul li.hsbcDivletNavigationSelected
+{
+	border: 0px;
+background: url("../../images/en/arrow_red_right_small.gif") no-repeat top left;
+
+	padding: 5px 0px 2px 8px !important;
+	/* \*/
+	padding: 4px 0px 2px 8px !important;
+	/* */
+	margin:2px 0px 3px 0px;
+	font-weight: normal;
+}
+/* no need to change up to here */
+div.hsbcDivletNavigation div.hsbcDivletNavListImage
+{
+	padding-top:10px;
+}
+
+/*
+----------------------------------------------------------------------------------------------
+HSBC UK Commercial CONTROL StyleSheet
+Author:   Louis Briggs
+Created:  21 March 2006
+Updated:  16 August 2006
+
+History:
+21 March 2006
+	Created stylesheet, all styles relate to Search results (full-width) page at present
+
+---------------------------------------------------------------------------------------------- */
+
+
+.containerControlFull
+{
+	float:left;
+	width:984px;
+	margin:30px 0px 15px 15px;
+}
+
+.containerControlFullPage
+{
+	float:left;
+	width:700px;
+	margin:15px 0px 15px 15px;
+}
+
+.containerControlFull h1,
+.containerControlFullPage h1
+{
+	margin:0px 0px 0px 0px;
+	padding:0px 0px 0px 0px;
+}
+
+.containerControlFull .contentArea,
+.containerControlFullPage .contentArea
+{
+	float:left;
+	background:#ECECEC;
+	padding:2px;
+	margin:15px 0px 0px 0px;
+}
+
+
+.containerControlFullPage .contentArea
+{
+	width:631px;
+}
+
+.containerControlFull .contentArea
+{
+	width:964px;
+}
+
+.containerControlFull .contentArea .contentHeader,
+.containerControlFullPage .contentArea .contentHeader
+{
+	float:left;
+	background:#fff;
+	padding:15px;
+	border-bottom:1px solid	#ECECEC;
+}
+
+.containerControlFull .contentArea .contentHeader
+{
+	width:934px;
+}
+
+.containerControlFullPage .contentArea .contentHeader
+{
+	width:601px;
+}
+
+.containerControlFull .contentArea .contentHeader h2
+.containerControlFullPage .contentArea .contentHeader h2
+{
+	font-size:86%;
+	font-weight:bold;
+	margin:0px;
+	padding:0px;
+}
+
+.containerControlFull .contentArea .contentHeader p,
+.containerControlFullPage .contentArea .contentHeader p
+{
+	font-size:74%;
+	margin:10px 0px;
+	padding:0px;
+}
+
+.containerControlFull .contentArea .contentHeader select,
+.containerControlFull .contentArea .contentHeader input,
+.containerControlFullPage .contentArea .contentHeader select,
+.containerControlFullPage .contentArea .contentHeader input
+{
+	font-size:74%;
+	color:#666;
+	margin:0px 0px 0px 3px;
+}
+
+.containerControlFull .contentArea .contentHeader label,
+.containerControlFullPage .contentArea .contentHeader label
+{
+	font-size:74%;
+	color:#666;
+}
+
+.containerControlFull .contentArea .contentNavigator,
+.containerControlFullPage .contentArea .contentNavigator
+{
+	float:left;
+	border-bottom:1px solid	#ECECEC;
+	background:#fff;
+	padding-top:3px;
+}
+
+.containerControlFullPage .contentArea .contentNavigator
+{
+	width:631px;
+}
+
+.containerControlFull .contentArea .contentNavigator
+{
+	width:964px;
+}
+
+
+.containerControlFull .contentArea .contentNavigator a,
+.containerControlFullPage .contentArea .contentNavigator a
+{
+	font-size:68%;
+	color:#666;
+	height:1px;
+}
+
+.containerControlFull .contentArea .contentNavigator ul,
+.containerControlFullPage .contentArea .contentNavigator ul
+{
+	list-style: none;
+	margin:1px 0px 4px 0px;
+	padding:0;
+}
+
+.containerControlFull .contentArea .contentNavigator ul li,
+.containerControlFullPage .contentArea .contentNavigator ul li
+{
+	display:inline;
+	margin:0px;
+}
+
+.containerControlFull .contentArea .contentNavigator ul li.selected,
+.containerControlFullPage .contentArea .contentNavigator ul li.selected
+{
+
+	padding-top:0px;
+}
+.containerControlFull .contentArea .contentNavigator ul li.selected a,
+.containerControlFullPage .contentArea .contentNavigator ul li.selected a
+{
+	margin-top:1px;
+	color:#fff;
+	background:#f00;
+}
+
+
+.containerControlFull .contentArea .contentNavigator ul li a,
+.containerControlFullPage .contentArea .contentNavigator ul li a
+{
+	margin:0;
+	padding:4px 10px 4px 10px;
+	border-left:1px solid #ECECEC;
+	vertical-align:middle;
+}
+
+.containerControlFull .contentArea .contentNavigator ul li.last a,
+.containerControlFullPage .contentArea .contentNavigator ul li.last a
+{
+	border-left:1px solid #ECECEC;
+	border-right:1px solid #ECECEC;
+}
+
+.containerControlFull .contentArea .contentNavigator .navStep a,
+.containerControlFullPage .contentArea .contentNavigator .navStep a
+{
+	padding:5px;
+	vertical-align:middle;
+}
+
+.containerControlFull .contentArea .contentResults,
+.containerControlFullPage .contentArea .contentResults
+{
+	margin:0px 0px 0px 0px;
+	padding:0px 0px 0px 0px;
+	float:left;
+	background:#F7F7F7;
+	width:100%;
+	border-bottom:1px solid #ECECEC;
+}
+
+
+.containerControlFull .contentArea .contentResults .result,
+.containerControlFullPage .contentArea .contentResults .result
+{
+	margin:15px 0px 0px 15px  ;
+	padding-right:15px;
+	padding-bottom:15px;
+	font-size:74%!important;
+	background:url("../../images/common/bg_hrStyle_Search.gif") repeat-x bottom left;
+}
+
+.containerControlFull .contentArea .contentResults .last,
+.containerControlFullPage .contentArea .contentResults .last
+{
+	background:none;
+}
+
+.containerControlFull .contentArea .contentResults .result p,
+.containerControlFullPage .contentArea .contentResults .result p
+{
+	margin:0;
+	padding:0;
+	font-size:100%!important;
+}
+
+.floatLeft
+{
+	float:left;
+	text-align:left;
+}
+
+.floatRight
+{
+	float:right;
+	text-align:right;
+}
+
+.floatCenter
+{
+	text-align:center;
+	margin-bottom: -8px;
+}
+
+.red
+{
+	color:#f00;
+}
+
+.floatFix
+{
+	float:none;
+	clear:both;
+}
+
+.hsbcDecStyle02 h1 {
+	padding-bottom:5px;
+	font-size:187% !important;
+}
+
+h1 span
+{
+	text-transform:uppercase;
+	font-size:80%;
+	color:red!important;
+}
+
+.noTabSpacing {
+	padding-top: 79px;
+}
+
+.rightColumn .hsbcInputSection p.extSizeAuto {
+	width:300px!important;
+}
+
+/*
+----------------------------------------------------------------------------------------------
+HSBC HK PWS HOME PAGE StyleSheet
+Author:   Louis Briggs
+Created:  11 April 2006
+Updated:  11 April 2006
+
+History:
+
+---------------------------------------------------------------------------------------------- */
+
+.containerControlHome {
+	float:left;
+	clear:both;
+	width:985px;
+	margin:0px 0px 0px 0px;
+	padding:0;
+	background:url("../../images/common/backgrounds/bg_home.gif") no-repeat bottom left;
+}
+
+.containerControlHome .containerMain{
+	float:left;
+	width:380px;
+}
+
+#container01 {
+	background:url("../../images/common/backgrounds/bg_home_gradient1.gif") repeat-x top left;
+}
+
+#container02 {
+	margin-left:16px;
+	background:url("../../images/common/backgrounds/bg_home_gradient2.gif") repeat-x top left;
+}
+
+#container03 {
+	background:none;
+	margin-left:16px;
+	width:193px;
+}
+
+.containerControlHome .containerMain .blockStyle01{
+	margin:16px 8px 16px 16px;
+}
+
+.containerControlHome .containerMain .blockStyle02{
+	margin:12px 16px 12px 16px;
+}
+
+.containerControlHome .containerMain .blockStyle03{
+	margin:12px 8px 12px 8px;
+}
+
+.containerControlHome .containerMain .blockStyle04{
+	margin:2px 8px 4px 8px;
+	_margin:-4px 8px 4px 8px;
+}
+
+
+.containerControlHome .containerMain hr {
+	clear:both;
+	border: 0;
+  	width: 100%;
+	color: #dadada;
+	background-color: #dadada;
+	height: 1px;
+	margin:0 !important;
+	padding:0 !important;
+}
+
+.containerControlHome .containerMain h2 {
+	margin:0;
+	padding:0;
+	background:none;
+	font-size:87%;
+	font-weight:bold;
+	color:#333;
+}
+
+.containerControlHome .containerMain h2 a {
+	padding:0px 0px 0px 10px;
+	display:block;
+	color:#333;
+
+}
+
+.containerControlHome .containerMain h2.red a {
+	background:url("../../images/common/arrow_red_home.gif") no-repeat center left;
+	color:#f00;
+}
+
+.containerControlHome .containerMain h2.black a {
+	background:url("../../images/common/arrow_black_home.gif") no-repeat center left;
+	color: #333;
+}
+
+.containerControlHome .containerMain .innerBlockStyle01 {
+	width:165px;
+	float:left;
+}
+
+.containerControlHome .containerMain .innerBlockStyle02 {
+	width:165px;
+	margin-left:16px;
+	float:left;
+}
+
+.containerControlHome .containerMain #powerVantage {
+	background:url("../../images/common/backgrounds/bg_home_powervantage.gif") no-repeat top right;
+	width:100px;
+	padding-right:65px;
+}
+
+.containerControlHome .containerMain #hsbcPremier {
+	background:url("../../images/common/backgrounds/bg_home_hsbcpremier.gif") no-repeat top right;
+	padding-right:65px;
+	width:100px;
+}
+
+.containerControlHome .containerMain #businessTravelCare {
+	background:url("../../images/common/backgrounds/bg_home_businesstravelcare.gif") no-repeat top right;
+	padding-right:65px;
+	width:100px;
+}
+
+.containerControlHome .containerMain #businessVantage {
+	background:url("../../images/common/backgrounds/bg_home_businessvantage.gif") no-repeat top right;
+	padding-right:65px;
+	width:100px;
+}
+
+h2 {
+	margin:0 !important;
+	padding:0 !important;
+	color:#333;
+}
+
+h3 {
+	margin:0px 0px 5px 0px !important;
+	padding:0 !important;
+	color:#333;
+}
+
+p {
+	margin:5px 0px 5px 0px !important;
+	padding:0 !important;
+	font-size:69%;
+	color:#333;
+}
+
+form {
+	margin:0px;
+	padding:0px;
+}
+
+form label {
+	color:#f00;
+}
+
+form input {
+	margin:0px 2px 0px 0px !important;
+	padding:0px 0px 0px 0px !important;
+}
+
+.bevelHR {
+	background:url("../../images/common/backgrounds/bg_home_bevel_hr.gif") repeat-x top left;
+	height:2px;
+	padding:0px !important;
+	margin:0px 8px !important;
+	line-height:2px;
+	font-size:1%;
+}
+
+#molecule {
+	margin-bottom:0px;
+	padding-bottom:8px;
+	padding-right:60px;
+	background:url("../../images/common/backgrounds/bg_home_molecule.gif") no-repeat bottom right;
+}
+
+/*
+----------------------------------------------------------------------------------------------
+HSBC HK HOME PAGE StyleSheet
+Author:   Louis Briggs
+Created:  24 May 2006
+Updated:  24 May 2006
+
+History:
+
+---------------------------------------------------------------------------------------------- */
+
+.containerLeftNav {
+	padding:8px 0px 0px 0px !important;
+	margin:0px !important;
+}
+
+.hsbcDivletHomeNavigation {
+	padding:0px 0px 0px 0px !important;
+	margin:0px 0px 0px 0px !important;
+	_padding:1px 0px 0px 0px !important;
+}
+
+.hsbcDivletHomeNavigation h2 {
+	background:url("../../images/common/arrow_right_home_large.gif") no-repeat center left;
+	padding:0px 0px 0px 12px !important;
+	margin:10px 0px 0px 10px !important;
+}
+
+.hsbcDivletHomeNavigation h2 a {
+	color:#000;
+}
+
+
+.hsbcDivletHomeNavigation h2 a:hover{
+	text-decoration:underline;
+}
+
+.hsbcDivletHomeNavigation h5 {
+	background:url("../../images/common/arrow_right_home_large.gif") no-repeat center left;
+	padding:0px 0px 0px 12px !important;
+	margin:10px 0px 0px 10px !important;
+}
+
+.hsbcDivletHomeNavigation h5 a {
+	color:#000;
+	text-decoration:none;
+}
+
+.hsbcDivletHomeNavigation h5 a:hover{
+	text-decoration:underline;
+}
+
+.hsbcDivletHomeNavigation p {
+	padding:6px 0px 0px 0px !important;
+	margin:0px 0px 0px 22px !important;
+	font-size:68%;
+}
+
+.hsbcDivletHomeNavigation p img {
+	padding:4px 0px 0px 0px !important;
+	margin:0px 0px 0px 0px !important;
+}
+
+.hsbcDivletHomeNavigation ul.hsbcDivletNavList {
+	padding:4px 0px 0px 0px !important;
+	margin:0px 0px 0px 10px !important;
+}
+
+
+.hsbcDivletHomeNavigation ul.hsbcDivletNavList li {
+	padding:0px 0px 0px 0px !important;
+	margin:0px 0px 0px 0px !important;
+	list-style:none;
+}
+
+.hsbcDivletHomeNavigation ul.hsbcDivletNavList li a {
+	background:url("../../images/common/arrow_right_home_small.gif") no-repeat center left;
+	padding:1px 0px 2px 12px !important;
+	margin:0px 0px 0px 0px !important;
+	font-size:68%;
+	color:#000;
+	text-decoration:none;
+	display:block;
+	height:1%;
+}
+
+.hsbcDivletHomeNavigation ul.hsbcDivletNavList li a:hover {
+	text-decoration:underline;
+}
+
+
+.hsbcDivletHomeNavigation ul.hsbcDivletSubNavList {
+	padding:10px 0px 0px 0px !important;
+	margin:10px 0px 0px 10px !important;
+	border-top:1px solid #D4D4D4;
+}
+
+.hsbcDivletHomeNavigation ul.hsbcDivletSubNavList li {
+	padding:0px 0px 0px 10px !important;
+	margin:0px 0px 0px 0px !important;
+	list-style:none;
+}
+
+.hsbcDivletHomeNavigation ul.hsbcDivletSubNavList li a {
+	padding:0px 0px 0px 0px !important;
+	margin:0px 0px 0px 0px !important;
+	color:#666;
+	font-size:68%;
+	text-decoration:none;
+}
+
+.hsbcDivletHomeNavigation ul.hsbcDivletSubNavList li a:hover {
+	text-decoration:underline;
+}
+
+.containerControlThree {
+	float:left;
+	padding-left:16px !important;
+}
+
+.containerControlThree hsbcColumn {
+	float:left;
+	padding-left:16px !important;
+}
+
+
+/*
+----------------------------------------------------------------------------------------------
+Added 6 Nov 2008
+---------------------------------------------------------------------------------------------- */
+
+.hsbcDivletHomeNavigation ul.hsbcDivletHKSubNavList2 {
+	padding:10px 0px 0px 0px !important;
+	margin:10px 0px 0px 10px !important;
+	border-top:1px solid #D4D4D4;
+}
+
+.hsbcDivletHomeNavigation ul.hsbcDivletHKSubNavList2 li {
+	padding:0px 0px 0px 10px !important;
+	margin:0px 0px 0px 0px !important;
+	list-style:none;
+}
+
+.hsbcDivletHomeNavigation ul.hsbcDivletHKSubNavList2 li a {
+	background:url("../../images/common/arrow_right_home_small.gif") no-repeat 20% left;
+	padding:1px 0px 2px 12px !important;
+	margin:0px 0px 0px 0px !important;
+	font-size:68%;
+	color:#666;
+	text-decoration:none;
+	display:block;
+	height:1%;
+}
+
+.hsbcDivletHomeNavigation ul.hsbcDivletHKSubNavList2 li a:hover {
+	text-decoration:underline;
+}
+
+/*
+----------------------------------------------------------------------------------------------
+HSBC HK HOME PAGE StyleSheet
+Author:  Mitch Leung
+Created: 13 January 2009
+Updated: 4 March 2009
+
+History:
+
+---------------------------------------------------------------------------------------------- */
+
+/*
+Banner framework
+*/
+
+#crosspromotions{
+position:relative;
+display:block;
+margin:16px 0 0 0;
+padding:0 0 0 32px;
+float:left;
+clear:left;
+width:578px;
+height:319px;
+overflow:hidden;
+_display:inline-block;
+zoom:1;
+}
+
+#crosspromotions .placard{
+position:relative;
+display:block;
+width:578px;
+height:234px;
+margin:0;
+padding:0;
+}
+
+#crosspromotions .controls{
+position:relative;
+display:block;
+margin:0;
+padding:0 0 0 14px;
+width:564px;
+height:85px;
+min-height:85px;
+overflow:hidden;
+background:url("../../../hk_home/images/banner_base.jpg") 0 0 no-repeat;
+_display:inline-block;
+zoom:1;
+}
+
+#crosspromotions .controls div{
+position:relative;
+display:block;
+margin:0 2px 0 0;
+padding:10px 4px;
+float:left;
+clear:none;
+width:82px;
+height:65px;
+background:none;
+_display:inline;
+zoom:1;
+}
+
+#crosspromotions .controls div.active{
+padding:6px 0 1px;
+border:4px solid #fe0000;
+}
+
+#crosspromotions .controls a{
+outline:none;
+}
+
+.crosspromotionInfo{
+position:relative;
+display:block;
+margin:16px 0 0 14px;
+padding:0;
+float:left;
+clear:right;
+width:150px;
+height:auto;
+min-height:319px;
+_display:inline-block;
+zoom:1;
+_height:319px;
+}
+
+.crosspromotionInfo .sidePromotionBlock{
+position:relative;
+display:block;
+margin:0;
+padding:0 15px 4px 0;
+width:135px;
+_display:inline-block;
+zoom:1;
+overflow:hidden;
+}
+
+.crosspromotionInfo .sidePromotionBlock ul{
+margin:6px 0;
+}
+
+.crosspromotionInfo .sidePromotionBlock li{
+margin-bottom:5px !important;
+padding-left:15px;
+_display:inline-block;
+background:url("../../../hk_home/images/arrow_promo.gif") 0 0 no-repeat;
+}
+
+.crosspromotionInfo .sidePromotionBlock li.online{
+background:url("../../../hk_home/images/arrow_promo_red.gif") 0 0 no-repeat;
+}
+
+.crosspromotionInfo .sideButton{
+padding:24px 4px 4px;
+background:url("../../../hk_home/images/cross_promo_shade.gif") 0 0 no-repeat;
+text-align:left;
+}
+
+/*
+home page banner title, date in table
+*/
+
+table.homeTitleTable{
+position:relative;
+clear:none;
+border:none;
+border-collapse:collapse;
+width:237px;
+z-index:2;
+}
+
+table.homeTitleTable td.title{
+margin:0;
+padding:0 0 0 12px;
+width:150px;
+text-align:left;
+vertical-align:middle;
+font-weight:700;
+}
+
+table.homeTitleTable td.date{
+margin:0;
+padding:0 12px 0 0;
+width:63px;
+text-align:right;
+vertical-align:middle;
+}
+
+/*
+videoBanner
+*/
+
+.videoBanner{
+position:relative;
+display:block;
+width:237px !important;
+height:140px;
+}
+
+.videoBanner div{
+position:relative;
+display:block;
+z-index:2;
+padding:0 14px;
+clear:both;
+}
+
+.videoBanner .videoHighlight{
+position:absolute;
+z-index:1;
+width:237px;
+height:140px;
+margin:0;
+padding:0;
+}
+
+.videoBanner table.homeTitleTable td{
+height:55px;
+}
+
+/*
+multiBanners
+*/
+.multiBanners{
+position:relative;
+display:block;
+width:237px;
+height:140px;
+overflow:hidden;
+}
+
+.multiBanners div{
+margin:0;
+padding:0;
+width:237px;
+height:140px;
+}
+
+.multiBanners .defaultBanner{
+min-height:140px;
+}
+
+.multiBanners .active{
+display:block;
+visibility:visible;
+}
+
+.multiBanners .inactive{
+display:none;
+visibility:hidden;
+}
+
+.videoBanner a,.crosspromotionInfo .sidePromotionBlock li a{
+text-decoration:none;
+}
+
+.videoBanner a:hover,.crosspromotionInfo .sidePromotionBlock li a:hover{
+text-decoration:underline;
+}
+
+/*
+video popup
+*/
+
+div.containerControlPopup .containerMain{
+width:765px;
+}
+
+.videoContainer{
+position:relative;
+display:block;
+margin:0;
+padding:0 0 0 37px !important;
+width:728px !important;
+}
+
+.videoContainer h1{
+padding:20px 0 16px;
+font-size:1.125em;
+}
+
+.videoContainer a{
+text-decoration:none;
+}
+
+.video{
+position:relative;
+display:block;
+margin:0 21px 0 0;
+padding:0;
+width:414px;
+float:left;
+clear:left;
+background:#f4f4f4 url("../../../special/videos/images/video_shw_middle.gif") 0 0 repeat-y;
+}
+
+.video .swf{
+position:relative;
+display:block;
+margin:0;
+padding:7px 7px 0;
+width:400px;
+height:auto;
+min-height:225px;
+_height:225px;
+background:url("../../../special/videos/images/video_shw_top.gif") 0 0 no-repeat;
+}
+
+.video .relatedInformation{
+position:relative;
+display:block;
+margin:0;
+padding:13px 24px 23px;
+width:366px;
+float:left;
+background:url("../../../special/videos/images/video_shw_bottom.gif") 0 100% no-repeat;
+}
+
+.video .title{
+position:relative;
+display:block;
+margin:0;
+padding:0;
+float:left;
+clear:left;
+font-weight:700;
+line-height:24px;
+color:#333;
+}
+
+.video .date{
+position:relative;
+display:block;
+margin:0;
+padding:0;
+float:right;
+clear:right;
+line-height:24px;
+}
+
+.video .description{
+position:relative;
+display:block;
+margin:0;
+padding:11px 0;
+float:left;
+width:370px;
+clear:both;
+}
+
+.video .description p{
+margin-top:0 !important;
+}
+
+.video .learnMore{
+position:relative;
+display:block;
+margin:0;
+padding:0 0 0 24px;
+width:192px;
+float:left;
+clear:none;
+background:url("../../../hk_home/images/icon_learn_more.gif") 0 3px no-repeat;
+}
+
+.video .read{
+position:relative;
+display:block;
+margin:0;
+padding:0 0 0 24px;
+width:126px;
+float:right;
+clear:right;
+background:url("../../../hk_home/images/icon_read.gif") 0 3px no-repeat;
+}
+
+.video .learnMore p,.video .read p{
+margin:0.5em 0 !important;
+}
+
+.archive{
+position:relative;
+display:block;
+margin:0;
+padding:0;
+width:292px;
+float:left;
+clear:right;
+}
+
+.archive h3{
+line-height:30px;
+margin:0 0 5px !important;
+color:#666;
+}
+
+.archive p{
+margin:5px 0 !important;
+color:#666;
+}
+
+.archive .item{
+position:relative;
+display:block;
+margin:0;
+padding:22px 19px 19px;
+width:254px;
+float:left;
+clear:both;
+background:url("../../../special/videos/images/video_more_shade.gif") 0 0 repeat-x;
+}
+
+.archive .item div{
+position:relative;
+display:block;
+margin:0 0 0 100px;
+}
+
+.archive .item .screen{
+position:relative;
+display:block;
+margin:0;
+float:left;
+clear:none;
+}
+
+.archive .notes{
+position:relative;
+display:block;
+margin:0 19px;
+}
+
+.archive .item p{
+margin:0 !important;
+}
+
+.archive .title a{
+font-weight:700;
+text-decoration:none;
+}
+
+.archive .title a:hover{
+text-decoration:underline;
+}
+
+.terms{
+position:relative;
+display:block;
+margin:0;
+padding:18px 24px;
+clear:both;
+}
+
+/*
+popup content
+*/
+
+.popupContent{
+margin:0;
+padding:0;
+width:904px;
+}
+
+.popupContent p.backToTop{
+margin:15px 0 30px !important;
+}
+
+.popupContent p.backToTop img{
+margin:0 7px 0 3px;
+}
+
+.popupContent .content{
+margin:0 0 0 46px;
+}
+
+.popupContent .header h1{
+position:relative !important;
+margin:0;
+padding:16px 30px;
+height:72px;
+color:#f00 !important;
+}
+
+/*
+online pricing
+*/
+
+.pricingTable .pricing{
+width:834px;
+}
+
+.pricingTable .pricing thead tr{
+background:url("../../../special/pricing/images/tbl_shade.gif") 0 0 repeat-x;
+}
+
+.pricingTable .pricing thead th.column1{
+text-align:left;
+color:#fff;
+width:200px;
+border-bottom:1px solid #fff;
+}
+
+.pricingTable .pricing thead th.column2{
+color:#fff;
+width:272px;
+border-bottom:1px solid #fff;
+}
+
+.pricingTable .pricing thead th.column3{
+color:#fff;
+width:250px;
+border-bottom:1px solid #fff;
+}
+
+.pricingTable .pricing thead th.column4{
+color:#fff;
+width:104px;
+border-bottom:1px solid #fff;
+}
+
+.pricingTable .pricing tbody td{
+margin:0;
+padding:10px;
+border-width:0 0 1px 1px;
+border-style:solid;
+border-color:#e6e6e6;
+}
+
+.pricingTable .pricing tbody td.column4{
+border-width:0 1px 1px;
+text-align:center;
+}
+
+.pricingTable .notes{
+width:832px;
+_margin:10px 0 0;
+}
+
+.anchorTable{
+width:832px;
+margin:0 0 15px;
+}
+
+.anchorTable .anchors{
+width:60%;
+text-align:left;
+}
+
+.anchorTable .anchors span.pipe{
+padding:0 10px;
+}
+
+.anchorTable .back{
+width:40%;
+text-align:right;
+}
+
+.anchorTable .back img{
+margin:0 5px;
+vertical-align:bottom;
+}
+
+.anchorTable a{
+text-decoration:none;
+}
+
+.anchorTable a:hover{
+text-decoration:underline;
+}
+
+/*
+features and privileges
+*/
+
+.features{
+margin:0;
+padding:0;
+width:904px;
+}
+
+.featuresContainer{
+margin:30px 0 0 46px;
+}
+
+.features .mainColumn{
+position:relative;
+display:block;
+margin:0 28px 0 0;
+padding:0;
+width:605px;
+float:left;
+clear:left;
+}
+
+.features .sidebar{
+position:relative;
+display:block;
+margin:0;
+padding:0;
+width:224px;
+float:left;
+clear:right;
+}
+
+.features div.title{
+position:relative;
+display:block;
+margin:0;
+padding:0;
+float:left;
+clear:left;
+font-weight:700;
+line-height:24px;
+color:#333;
+}
+
+.features div.link{
+position:relative;
+display:block;
+margin:0;
+padding:0 0 0 20px;
+float:right;
+clear:none;
+line-height:24px;
+background:url("../../../hk_home/images/icon_pricing.gif") 0 3px no-repeat;
+}
+
+.features div.link a{
+text-decoration:none;
+}
+
+.features div.link a:hover{
+text-decoration:underline;
+}
+
+.features .feature .timeline{
+border-bottom:1px solid #fff;
+}
+
+.features .feature .item{
+margin:0 0 20px;
+padding:10px 24px 20px 0;
+background:url("../../../special/features/images/features_shade.gif") 100% 100% no-repeat;
+clear:both;
+}
+
+.features .feature .item h3{
+margin:2px 0 8px !important;
+}
+
+.features .feature .item p{
+line-height:1.4em !important;
+}
+
+.features .feature .item img.left{
+float:left;
+margin:0 20px 10px 0;
+}
+
+.features .feature .item img.right{
+float:right;
+margin:0 0 10px 20px;
+}
+
+.sidebar .styledBox{
+display:block;
+border:4px solid #ccc;
+margin:0;
+padding:16px 8px 8px 16px ;
+}
+
+.features .usefulList{
+list-style:none;
+margin:8px 0;
+padding:0;
+}
+
+.features .usefulList li{
+clear:both;
+margin:0 0 16px;
+padding:0 50px 0 0;
+line-height:1.4em;
+}
