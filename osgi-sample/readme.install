@@ -1,0 +1,16 @@
+http://blog.csdn.net/primary_wind/article/details/51814237
+
+---执行bin中felix.jar
+
+---控制台显示g！无报错信息则执行成功
+
+---执行命令lb，可以查看已启动bundle
+
+---然后打包client模块以及server模块，并将打包的jar包拷贝到plugins中
+
+---执行命令 install file:plugins/XXX.jar,会显示ID，然后执行start ID，最后执行lb查看是否启动成功，并打印对应的信息
+
+
+由于client以及server都是在本地调用，如果需要远程调用可以参考这篇文章：
+
+http://www.cnblogs.com/lw900320/archive/2012/06/26/2563221.html
