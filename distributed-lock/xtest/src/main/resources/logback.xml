@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="false">
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<target>System.out</target>
+		<encoding>UTF-8</encoding>
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<pattern><![CDATA[
+%n%-4r [%d{yyyy-MM-dd HH:mm:ss} %X{productionMode}] - %X{method} %X{requestURIWithQueryString} [ip=%X{remoteAddr}, ref=%X{referrer}, ua=%X{userAgent}, sid=%X{cookie.JSESSIONID}]%n  %-5level %logger{35} - %m%n
+            ]]></pattern>
+		</layout>
+		<filter class="com.alibaba.citrus.logconfig.logback.LevelRangeFilter">
+			<levelMax>WARN</levelMax>
+		</filter>
+	</appender>
+
+	<appender name="STDERR" class="ch.qos.logback.core.ConsoleAppender">
+		<target>System.err</target>
+		<encoding>UTF-8</encoding>
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<pattern><![CDATA[
+%n%-4r [%d{yyyy-MM-dd HH:mm:ss} %X{productionMode}] - %X{method} %X{requestURIWithQueryString} [ip=%X{remoteAddr}, ref=%X{referrer}, ua=%X{userAgent}, sid=%X{cookie.JSESSIONID}]%n  %-5level %logger{35} - %m%n
+            ]]></pattern>
+		</layout>
+		<filter class="com.alibaba.citrus.logconfig.logback.LevelRangeFilter">
+			<levelMin>WARN</levelMin>
+		</filter>
+	</appender>
+
+	<appender name="PROJECT" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${loggingRoot}/ali-import-admin.log</file>
+		<encoding>UTF-8</encoding>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${loggingRoot}/ali-import-admin-%d{yyyy-MM-dd}.log</fileNamePattern>
+			<maxHistory>45</maxHistory>
+		</rollingPolicy>
+
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<pattern><![CDATA[
+%n%-4r [%d{yyyy-MM-dd HH:mm:ss} %X{productionMode}] - %X{method} %X{requestURIWithQueryString} [ip=%X{remoteAddr}, ref=%X{referrer}, ua=%X{userAgent}, sid=%X{cookie.JSESSIONID}]%n  %-5level %logger{35} - %m%n
+            ]]></pattern>
+		</layout>
+		<filter class="com.alibaba.citrus.logconfig.logback.LevelRangeFilter">
+			<levelMin>WARN</levelMin>
+		</filter>
+	</appender>
+
+	<appender name="JmonitorAppender" class="com.alibaba.alimonitor.jmonitor.plugin.logback.JMonitorLogbackAppender">
+	</appender>
+
+	<appender name="XflushLog" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<encoder>
+			<pattern>%d{yyyy-MM-dd HH:mm:ss} %m%n</pattern>
+		</encoder>
+
+		<filter class="ch.qos.logback.classic.filter.LevelFilter">
+			<level>WARN</level>
+			<onMatch>ACCEPT</onMatch>
+			<onMismatch>DENY</onMismatch>
+		</filter>
+
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${loggingRoot}/tracelog/xflush-%d{yyyy-MM-dd}.log</fileNamePattern>
+			<maxHistory>7</maxHistory>
+		</rollingPolicy>
+	</appender>
+
+	<logger name="com.taobao.importadmin.xflush.log" level="WARN" additivity="false">
+		<appender-ref ref="XflushLog" />
+	</logger>
+
+	<root>
+		<level value="INFO" />
+		<!-- <appender-ref ref="STDERR" />
+		<appender-ref ref="STDOUT" /> -->
+		<appender-ref ref="PROJECT" />
+		<appender-ref ref="JmonitorAppender" />
+	</root>
+
+
+
+	<appender name="gtool" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>/Users/daixing/Desktop/gtool.log</file>
+		<encoding>UTF-8</encoding>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>/Users/daixing/Desktop/gtool-%d{yyyy-MM-dd}.log</fileNamePattern>
+			<maxHistory>45</maxHistory>
+		</rollingPolicy>
+
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<pattern><![CDATA[
+			%d{yyyy-MM-dd HH:mm:ss} %m%n
+            ]]></pattern>
+		</layout>
+		<filter class="com.alibaba.citrus.logconfig.logback.LevelRangeFilter">
+			<levelMin>INFO</levelMin>
+		</filter>
+	</appender>
+
+	<logger name="com.alibaba" level="INFO" additivity="false">
+		<appender-ref ref="gtool" />
+	</logger>
+
+	<!-- <logger name="com.ibatis" level="DEBUG" /> -->
+</configuration>

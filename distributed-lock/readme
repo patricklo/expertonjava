@@ -1,0 +1,123 @@
+前言
+经常遇到这样的情况。项目中需要使用分布式锁，发现没有完整的产品可以使用，就临时写个分布式锁，花费许多时间和精力来开发和测试一个简单的分布式锁，实现部分功能，然后使用。后面遇到这种情况，又去重新开发和测试，重复建设。
+
+这里提供一个分布式锁的产品，实现完整功能，接入简单，方便业务方使用。
+
+接入和使用
+工程地址
+工程名称：gtool
+目前可以使用的是，xlock-tair，xlock-redis
+
+
+
+使用方法
+步骤1，接入pom依赖，获得jar包。
+只接入需要的pom依赖，不需要的就不用接了。隐式依赖 slf4j-api-1.7.5 。
+如下的pom，就是可用的最新版本。
+tair 锁的pom。tair 只能使用ldb 。
+redis 锁的pom。redis 依赖 jedis-2.6.0 及以上。
+        <!-- tair lock -->
+        <dependency>
+            <groupId>com.alibaba.gtool</groupId>
+            <artifactId>xlock-tair</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <!-- redis lock -->
+        <dependency>
+            <groupId>com.alibaba.gtool</groupId>
+            <artifactId>xlock-redis</artifactId>
+            <version>1.1.0</version>
+        </dependency>
+步骤2，配置锁管理器。
+tair 锁管理器(通过 incr 实现)
+tair 锁管理器(通过 version 实现)
+redis 锁管理器
+        //tair 锁管理器(通过 incr 实现)
+        TairLockManagerByIncr lockManager = new TairLockManagerByIncr();
+        lockManager.setTairManager(tairManager);//参数
+        lockManager.setTairNamespace(tairNamespace);//参数
+        lockManager.setEnableLogWarn(true);//是否使用logWarn输出。默认false
+        //tair 锁管理器(通过 version 实现)
+        TairLockManagerByVersion lockManager = new TairLockManagerByVersion();
+        lockManager.setTairManager(tairManager);//参数
+        lockManager.setTairNamespace(tairNamespace);//参数
+        lockManager.setEnableLogWarn(true);//是否使用logWarn输出。默认false
+        //redis 锁管理器
+        RedisLockManager lockManager = new RedisLockManager();
+        lockManager.setJedisPool(jedisPool);//JedisPool是线程安全的。
+        lockManager.setJedisDBIndex(0);//redis的库。默认0
+        lockManager.setEnableLogWarn(true);//是否使用logWarn输出。默认false
+步骤3，由锁管理器创建锁。
+        //由锁管理器创建锁
+        XLock lock = lockManager.createLock("lock_taobao_user_1200000000");
+步骤4，配置监听器。(可省略)
+建议至少要配置事件 LOSE_LOCK 的监听器。
+           //这里举个例子。实际可以配置多个不同的事件监听器。
+            YourBizListener listener = new YourBizListener(XLockEventEnum.LOSE_LOCK);
+            lock.addEventListener(listener);
+步骤5，多线程使用锁。
+加锁，解锁。为了安全，建议使用 try-catch-finally 结构。
+            boolean lockResult = false;
+            try {
+                /**
+                 * 尝试一次加锁。不阻塞,不等待。
+                 * 加锁成功返回true,否则返回false。
+                 */
+                lockResult = lock.tryLock();
+
+                if (lockResult) {
+                    //do something
+                    Thread.sleep(2000L);
+                }
+
+            } catch (Exception e) {
+                logger.error("ex", e);
+            } finally {
+                if (lockResult) {
+                    /**
+                     * 解锁
+                     */
+                    lock.unLock();
+                }
+            }
+            try {
+                /**
+                 * 加锁。
+                 * 加锁成功,返回true。
+                 * 否则,一直等待,直到加锁成功。
+                 */
+                lock.lock();
+
+                //do something
+                Thread.sleep(2000L);
+
+            } catch (Exception e) {
+                logger.error("ex", e);
+            } finally {
+                /**
+                 * 解锁
+                 */
+                lock.unLock();
+            }
+            boolean lockResult = false;
+            try {
+                /**
+                 * 尝试一次加锁。
+                 * 加锁成功,返回true。
+                 * 加锁失败,就等待最大时长。最终加锁成功,返回true;否则,返回false。
+                 */
+                lockResult = lock.tryLock(10000L);
+                if (lockResult) {
+                    //do something
+                    Thread.sleep(3000);
+                }
+            } catch (Exception e) {
+                logger.error("ex", e);
+            } finally {
+                if (lockResult) {
+                    /**
+                     * 解锁
+                     */
+                    lock.unLock();
+                }
+            }

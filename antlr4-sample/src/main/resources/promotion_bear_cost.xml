@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+<sqlMap namespace="promotionBearCost">
+
+    <typeAlias alias="promotionBearCost" type="com.alibaba.scm.settleplatform.dataobject.PromotionBearCost"/>
+    <typeAlias alias="promotionBearCostQuery" type="com.alibaba.scm.settleplatform.query.PromotionBearCostQuery"/>
+
+    <resultMap id="promotionBearCostMap" class="promotionBearCost">
+        <result column="id" property="id"/>
+        <result column="gmt_create" property="gmtCreate" jdbcType="DATETIME"/>
+        <result column="gmt_modified" property="gmtModified" jdbcType="DATETIME"/>
+        <result column="prom_key"  property="promKey"/>
+		<result column="prom_desc" property="promDesc"/>
+		<result column="tool_type" property="toolType"/>
+		<result column="bear_cost" property="bearCost"/>
+		<result column="settle_biz_type" property="settleBizType"/>
+		<result column="settle_sub_biz_type" property="settleSubBizType"/>
+		<result column="seller_id" property="sellerId"/>
+		<result column="status" property="status"/>
+		<result column="attribute" property="attribute"/>
+		<result column="single_promotion" property="singlePromotion"/>
+        <result column="valid_start_time" property="validStartTime" jdbcType="DATETIME"/>
+        <result column="valid_end_time" property="validEndTime" jdbcType="DATETIME"/>
+        <result column="version" property="version"/>
+    </resultMap>
+
+    <insert id="insert_promotion_bear_cost" parameterClass="promotionBearCost">
+      	insert into promotion_bear_cost (gmt_create,gmt_modified,prom_key,prom_desc,tool_type,bear_cost,settle_biz_type,settle_sub_biz_type,seller_id,status,attribute,single_promotion,valid_start_time,valid_end_time,version)
+		values(now(),now(),#promKey#,#promDesc#,#toolType#,#bearCost#,#settleBizType#,#settleSubBizType#,#sellerId#,#status#,#attribute#,#singlePromotion#,#validStartTime#,#validEndTime#,#version#)
+        <selectKey keyProperty="id" resultClass="long">
+            select last_insert_id()
+        </selectKey>
+    </insert>
+
+    <sql id="query_condition">
+        <dynamic prepend="where">
+        	<isNotEqual property="settleBizType" compareValue="0" prepend="and">
+				settle_biz_type=#settleBizType#
+			</isNotEqual>
+			<isNotEqual property="status" compareValue="0" prepend="and">
+				status=#status#
+			</isNotEqual>          
+			<isNotEqual property="id" compareValue="0" prepend="and">
+				id=#id#
+			</isNotEqual>
+        </dynamic>
+    </sql>
+
+    <sql id="query_all_columns">
+        select 
+        id,
+        gmt_create,
+        gmt_modified,
+        prom_key,
+		prom_desc,
+		tool_type,
+		bear_cost,
+		settle_biz_type,
+        settle_sub_biz_type,
+		seller_id,
+		status,
+		attribute,
+		single_promotion,
+        valid_start_time,
+        valid_end_time,
+        version
+        from promotion_bear_cost
+    </sql>
+
+    <update id="update_promotion_bear_cost_by_query" parameterClass="promotionBearCostQuery">
+        update promotion_bear_cost
+        set gmt_modified = now()
+        and version = version+1
+        <dynamic>          
+            <isNotEqual property="status" compareValue="0" prepend="and">
+				status=#status#
+			</isNotEqual>   
+        </dynamic>
+       	<dynamic prepend="where">
+            <isNotEqual property="lastStatus" compareValue="0" prepend="and">
+				status=#lastStatus#
+			</isNotEqual>   
+            <isNotEqual property="id" compareValue="0" prepend="and">
+				id=#id#
+			</isNotEqual>   
+            <isNotEqual property="version" compareValue="-1" prepend="and">
+                version=#version#
+			</isNotEqual>
+        </dynamic>
+    </update>
+
+    <select id="count_promotion_bear_cost_by_query" parameterClass="promotionBearCostQuery" resultClass="int">
+        select count(*) from promotion_bear_cost
+        <include refid="query_condition"/>
+    </select>
+
+    <select id="get_promotion_bear_cost_by_query" parameterClass="promotionBearCostQuery" resultMap="promotionBearCostMap">
+        <include refid="query_all_columns"/>
+        <include refid="query_condition"/>
+        limit #startPosForMysql#,#pageSize#
+    </select>
+
+</sqlMap>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.taobao</groupId>
+        <artifactId>parent</artifactId>
+        <version>1.0.2</version>
+    </parent>
+    <groupId>com.alibaba.gtool</groupId>
+    <artifactId>gtool</artifactId>
+    <version>1.0.0</version>
+    <packaging>pom</packaging>
+    <name>gtool-all</name>
+    <description>gtool-all</description>
+    <properties>
+
+    </properties>
+
+    <modules>
+        <module>gtool-util</module>
+        <module>xlock-common</module>
+        <module>xlock-tair</module>
+        <module>xlock-redis</module>
+        <module>xlock-zookeeper</module>
+        <module>xtest</module>
+    </modules>
+
+    <dependencyManagement>
+        <dependencies>
+
+
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>1.7.5</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>18.0</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.taobao.tair</groupId>
+                <artifactId>tair-client</artifactId>
+                <version>2.3.4.66</version>
+                <exclusions>
+                    <exclusion>
+                        <artifactId>spring</artifactId>
+                        <groupId>org.springframework</groupId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>com.github.spullara.redis</groupId>
+                <artifactId>client</artifactId>
+                <version>0.7</version>
+            </dependency>
+
+            <dependency>
+                <groupId>redis.clients</groupId>
+                <artifactId>jedis</artifactId>
+                <version>2.6.0</version>
+            </dependency>
+
+
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <finalName>gtool-all</finalName>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>2.5</version>
+                <configuration>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <phase>compile</phase>
+                        <configuration>
+                            <tasks>
+                                <echo message="project home:        ${basedir}"/>
+                                <echo message="java home:           ${java.home}"/>
+                                <echo message="java source version: 1.6"/>
+                                <echo message="java target version: 1.6"/>
+                                <echo message="java source charset: UTF-8"/>
+                            </tasks>
+                        </configuration>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.4.3</version>
+                <configuration>
+                    <testFailureIgnore>true</testFailureIgnore>
+                    <argLine>-Xms64m -Xmx256m</argLine>
+                    <includes>
+                        <include implementation="java.lang.String">**/*Test.java</include>
+                    </includes>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-eclipse-plugin</artifactId>
+                <version>2.4</version>
+                <configuration>
+                    <downloadSources>true</downloadSources>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
