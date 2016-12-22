@@ -101,24 +101,50 @@ public class Test {
         return reverseString(str.substring(1)) + str.charAt(0);
     }
     public static void main(String [] args){
-        HashMap hashMap;
-        String test= "abcde";
-        System.out.println(reverseString(test));
-        ArrayList arrayList;
-        LinkedList linkedList;
-        ConcurrentHashMap concurrentHashMap;
-        System.out.println(test.substring(1, 3));
+//        HashMap hashMap;
+//        String test= "abcde";
+//        System.out.println(reverseString(test));
+//        ArrayList arrayList;
+//        LinkedList linkedList;
+//        ConcurrentHashMap concurrentHashMap;
+//        System.out.println(test.substring(1, 3));
+//
+//        int DEFAULT_CONCURRENCY_LEVEL = 16;
+//        int ssize = 1;
+//        while (ssize < DEFAULT_CONCURRENCY_LEVEL) {
+//            //++sshift;
+//            ssize <<= 1;
+//        }
+//        System.out.println(ssize);
+//       // int segmentShift = 32 - sshift;
+//        int segmentMask = ssize - 1;
+//        System.out.println(segmentMask);
 
-        int DEFAULT_CONCURRENCY_LEVEL = 16;
-        int ssize = 1;
-        while (ssize < DEFAULT_CONCURRENCY_LEVEL) {
-            //++sshift;
-            ssize <<= 1;
-        }
-        System.out.println(ssize);
-       // int segmentShift = 32 - sshift;
-        int segmentMask = ssize - 1;
-        System.out.println(segmentMask);
+//        String literalString1 = "Test";
+//        String literalString2 = "Test";
+//        String newString = new String("Test");
+//        String newString2 = new String("Test");
+//        System.out.println(literalString1==literalString2);
+//        System.out.println(literalString1==newString);
+//        newString.intern();
+//        System.out.println(literalString1 == newString);
+//        newString2.intern();
+//        System.out.println(newString == newString2);
+//        System.out.println(literalString1 == newString2);
+
+
+
+        String str = "abc";
+        String str1 = "abc";
+        String str2 = new String("abc");
+        System.out.println(str == str1);
+        System.out.println(str1 == "abc");
+        System.out.println(str2 == "abc");
+        System.out.println(str1 == str2);
+        System.out.println(str1.equals(str2));
+        System.out.println(str1 == str2.intern());
+        System.out.println(str2 == str2.intern());
+        System.out.println(str1.hashCode() == str2.hashCode());
 
     }
 

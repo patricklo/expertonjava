@@ -17,25 +17,25 @@ public class QuickSort {
     }
 
     public static void quickSort(int[] unsorted, int left, int right){
-        int pivot;
+        int pivotIndex;
         if(left < right){
-            pivot = partition(unsorted,left,right);
-            quickSort(unsorted,left,pivot-1);
-            quickSort(unsorted,pivot+1, right);
+            pivotIndex = partition(unsorted,left,right);
+            quickSort(unsorted,left,pivotIndex-1);
+            quickSort(unsorted,pivotIndex+1, right);
         }
     }
 
     public static int partition(int[] unsorted, int left, int right){
-        int pivotKey  = unsorted[left];
+        int pivotValue  = unsorted[left];
         while(left < right) {
-            while (left < right && unsorted[right] >= pivotKey) --right;
+            while (left < right && unsorted[right] >= pivotValue) --right;
             unsorted[left] = unsorted[right];
 
-            while (left < right && unsorted[left] <= pivotKey) ++left;
+            while (left < right && unsorted[left] <= pivotValue) ++left;
             unsorted[right] = unsorted[left];
         }
         System.out.printf("unsort array after pass %s: %n",  Arrays.toString(unsorted));
-        unsorted[left] = pivotKey;
+        unsorted[left] = pivotValue;
         return left;
     }
 }
