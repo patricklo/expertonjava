@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.lo.serviceloader.sample</groupId>
+    <artifactId>serviceloader-sample</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <java-version>1.8</java-version>
+        <java-version-16>1.6</java-version-16>
+        <java-encoding>GBK</java-encoding>
+        <dictionary-demo-version>1.0-SNAPSHOT</dictionary-demo-version>
+        <dictionary-service-provider-version>1.0-SNAPSHOT</dictionary-service-provider-version>
+        <dictionary-extended-version>1.0-SNAPSHOT</dictionary-extended-version>
+        <dictionary-general-version>1.0-SNAPSHOT</dictionary-general-version>
+    </properties>
+    <modules>
+        <module>dictionary-service-provider</module>
+        <module>dictionary-general</module>
+        <module>dictionary-extended</module>
+        <module>dictionary-demo</module>
+    </modules>
+
+
+</project>
