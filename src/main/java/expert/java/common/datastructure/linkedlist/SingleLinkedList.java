@@ -3,29 +3,29 @@ package expert.java.common.datastructure.linkedlist;
 /**
  * Created by Patrick on 14/1/17.
  */
-public class MyOwnLinkedList {
+public class SingleLinkedList {
 
 
-    private LinkedListElement first;
+    private LinkedListElement current;
 
-    public MyOwnLinkedList(){
-        first = null;
+    public SingleLinkedList(){
+        current = null;
     }
 
     public boolean isEmpty(){
-        return first == null;
+        return current == null;
     }
 
     public void insert(Object data){
         LinkedListElement element = new LinkedListElement(data);
-        element.next = first;
-        first = element;
+        element.next = current;
+        current = element;
     }
 
     public LinkedListElement delete(){
-        if(first != null) {
-            LinkedListElement temp = first;
-            first = first.next;
+        if(current != null) {
+            LinkedListElement temp = current;
+            current = current.next;
             return temp;
         }else{
             return null;
