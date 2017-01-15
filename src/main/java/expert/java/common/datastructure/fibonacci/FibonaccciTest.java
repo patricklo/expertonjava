@@ -38,15 +38,15 @@ public class FibonaccciTest {
 
         int fibNMinusOne = 1;
         int fibNMinusTwo = 0;
-        int fibN = 0;
+        int fibTemp = 0;
 
         for(int i=2; i<=n; i++){
-            fibN = fibNMinusOne + fibNMinusTwo;
+            fibTemp = fibNMinusOne + fibNMinusTwo;
 
             fibNMinusTwo = fibNMinusOne;
-            fibNMinusOne = fibN;
+            fibNMinusOne = fibTemp;
         }
-        return fibN;
+        return fibTemp;
 
     }
 
@@ -58,12 +58,9 @@ public class FibonaccciTest {
       变种题目：
         一只青蛙一次可以跳上1级台阶，也可以跳上2级。求该青蛙跳上一个n级台阶总共有多少种跳法？
      */
-
     public static void main(String[] args){
-//        FibonaccciTest.fibonacci(100);
-        System.out.println(FibonaccciTest.fibonacci02(10));
+        for(int i=1; i<=10; i++){
+            System.out.print(FibonaccciTest.fibonacci02(i) +" ");
+        }
     }
-
-
-
 }
